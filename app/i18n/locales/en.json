@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out through any of these platforms. I'll get back to you as soon as possible."
+  },
+  "language": {
+    "en": "English",
+    "zh": "中文"
+  },
+  "about": {
+    "badge": "About Me",
+    "title": "Building digital products, brands, and experiences",
+    "intro1": "I'm a passionate software engineer with a deep love for creating innovative solutions. My journey in tech began with a curiosity about how things work, which led me to explore various aspects of software development.",
+    "intro2": "With experience in full-stack development, I've had the opportunity to work on diverse projects ranging from web applications to AI-powered solutions. I'm interested in creating user-centric applications that solve real-world problems.",
+    "location": {
+      "label": "Location",
+      "value": ""
+    },
+    "experience": {
+      "label": "Experience",
+      "value": "5+ Years"
+    },
+    "focus": {
+      "label": "Focus",
+      "value": "Full Stack Development"
+    },
+    "skills": {
+      "badge": "Skills & Expertise",
+      "title": "Technical Proficiency",
+      "categories": {
+        "languages": "Languages",
+        "frontend": "Frontend",
+        "backend": "Backend"
+      }
+    },
+    "experience_section": {
+      "badge": "Work History",
+      "title": "Professional Experience",
+      "jobs": {
+        "senior": {
+          "title": "Senior Software Engineer",
+          "company": "Tech Company",
+          "period": "2021 - Present",
+          "description": "Leading the development of web applications using React and Node.js. Implementing CI/CD pipelines and mentoring junior developers.",
+          "achievements": [
+            "Reduced application load time by 40% through optimization",
+            "Led team of 5 developers in successful project delivery",
+            "Implemented automated testing increasing coverage to 85%"
+          ]
+        },
+        "fullstack": {
+          "title": "Full Stack Developer",
+          "company": "Digital Agency",
+          "period": "2019 - 2021",
+          "description": "Developed and maintained multiple client projects using various technologies including React, Django, and AWS.",
+          "achievements": [
+            "Delivered 10+ successful client projects",
+            "Introduced modern development practices",
+            "Improved client satisfaction rate by 25%"
+          ]
+        }
+      }
+    }
+  }
+}
