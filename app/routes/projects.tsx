@@ -54,7 +54,7 @@ export default function Projects() {
       {/* 背景装饰 */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* 主渐变背景 */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(168,85,247,0.12),transparent_50%),radial-gradient(ellipse_at_bottom,rgba(20,184,166,0.12),transparent_50%)] opacity-40" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(168,85,247,0.12),transparent_50%),radial-gradient(ellipse_at_bottom,rgba(20,184,166,0.12),transparent_50%)] opacity-20" />
         
         {/* 网格背景 - 使用 mask 实现渐变消失效果 */}
         <div 
@@ -65,34 +65,22 @@ export default function Projects() {
           }}
         />
         
-        {/* 交叉网格 - 添加旋转效果增加层次感 */}
-        <div 
-          className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:48px_48px]"
-          style={{ 
-            transform: 'rotate(45deg) scale(1.5)',
-            maskImage: 'radial-gradient(ellipse at center, black 0%, transparent 70%)',
-            WebkitMaskImage: 'radial-gradient(ellipse at center, black 0%, transparent 70%)'
-          }}
-        />
-        
         {/* 顶部渐变光晕 */}
-        <div className="absolute top-0 left-0 right-0 h-[600px]">
+        {/* <div className="absolute top-0 left-0 right-0 h-[600px]">
           <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-purple-500/5 to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.08),transparent_50%)]" />
-        </div>
+        </div> */}
         
         {/* 底部渐变光晕 */}
-        <div className="absolute bottom-0 left-0 right-0 h-[600px]">
+        {/* <div className="absolute bottom-0 left-0 right-0 h-[600px]">
           <div className="absolute inset-0 bg-gradient-to-t from-teal-500/10 via-teal-500/5 to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(20,184,166,0.08),transparent_50%)]" />
-        </div>
+        </div> */}
         
         {/* 动态光斑效果 */}
-        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-teal-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-[pulse_9s_ease-in-out_infinite]" />
-        
-        {/* 底部渐变遮罩 */}
-        <div className="absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-t from-zinc-950 to-transparent" />
+        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-xl animate-[pulse_8s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-teal-500/10 rounded-full mix-blend-multiply filter blur-xl animate-[pulse_9s_ease-in-out_infinite]" />
+
       </div>
 
       <NavBar />
