@@ -27,11 +27,11 @@ export default function About() {
     <div className="min-h-screen bg-zinc-950">
       <NavBar />
       <GridBackground />
-      
+
       <div className="container px-4 mx-auto pt-32 relative">
         <div className="absolute top-20 left-1/4 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl" />
-        
+
         <motion.div
           variants={container}
           initial="hidden"
@@ -42,7 +42,7 @@ export default function About() {
           <motion.section variants={item}>
             <div className="relative space-y-8">
               <div className="inline-block">
-                <motion.span 
+                <motion.span
                   className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-300"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -64,7 +64,7 @@ export default function About() {
                     {t('about.intro2')}
                   </p>
                 </div>
-                
+
                 <div className="space-y-8 lg:border-l lg:pl-12 lg:border-zinc-800">
                   <InfoItem
                     icon={<GlobeIcon className="w-5 h-5 text-violet-300" />}
@@ -90,7 +90,7 @@ export default function About() {
           <motion.section variants={item} className="relative">
             <div className="space-y-12 relative">
               <div className="space-y-4">
-                <motion.span 
+                <motion.span
                   className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-300"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -104,30 +104,30 @@ export default function About() {
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <SkillCategory 
+                <SkillCategory
                   title={t('about.skills.categories.languages')}
                   skills={[
-                    { name: "TypeScript", level: 90 },
-                    { name: "Python", level: 85 },
-                    { name: "Java", level: 80 },
+                    { name: "Rust", level: 30 },
+                    { name: "JavaScript", level: 45 },
+                    { name: "Java", level: 90 },
                     { name: "SQL", level: 85 }
                   ]}
                 />
-                <SkillCategory 
+                <SkillCategory
                   title={t('about.skills.categories.frontend')}
                   skills={[
-                    { name: "React", level: 95 },
-                    { name: "Next.js", level: 90 },
-                    { name: "TailwindCSS", level: 90 },
-                    { name: "Framer Motion", level: 85 }
+                    { name: "React", level: 75 },
+                    { name: "Remix", level: 80 },
+                    { name: "TailwindCSS", level: 70 },
+                    { name: "Framer Motion", level: 65 }
                   ]}
                 />
-                <SkillCategory 
+                <SkillCategory
                   title={t('about.skills.categories.backend')}
                   skills={[
-                    { name: "Node.js", level: 90 },
-                    { name: "Express", level: 85 },
-                    { name: "Django", level: 80 },
+                    { name: "SpringBoot", level: 90 },
+                    { name: "Redis", level: 85 },
+                    { name: "RabbitMQ", level: 80 },
                     { name: "PostgreSQL", level: 85 }
                   ]}
                 />
@@ -137,36 +137,57 @@ export default function About() {
 
           {/* Experience Section */}
           <motion.section variants={item} className="relative pb-16">
-            <div className="space-y-12 relative">
-              <div className="space-y-4">
-                <motion.span 
-                  className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-300"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {t('about.experience_section.badge')}
-                </motion.span>
-                <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
-                  {t('about.experience_section.title')}
-                </h2>
-              </div>
+            <div className="flex flex-col">
+              {/* 时间线 */}
+              <div className="absolute left-1 h-2/3 border-l border-zinc-800" style={{ top: '20%' }}></div>
 
-              <div className="space-y-12">
-                <ExperienceItem
-                  title={t('about.experience_section.jobs.senior.title')}
-                  company={t('about.experience_section.jobs.senior.company')}
-                  period={t('about.experience_section.jobs.senior.period')}
-                  description={t('about.experience_section.jobs.senior.description')}
-                  achievements={t('about.experience_section.jobs.senior.achievements', { returnObjects: true }) as string[]}
-                />
-                <ExperienceItem
-                  title={t('about.experience_section.jobs.fullstack.title')}
-                  company={t('about.experience_section.jobs.fullstack.company')}
-                  period={t('about.experience_section.jobs.fullstack.period')}
-                  description={t('about.experience_section.jobs.fullstack.description')}
-                  achievements={t('about.experience_section.jobs.fullstack.achievements', { returnObjects: true }) as string[]}
-                />
+              <div className="space-y-8 relative">
+                <div className="space-y-4">
+                  <motion.span
+                    className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-300"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {t('about.experience_section.badge')}
+                  </motion.span>
+                  <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
+                    {t('about.experience_section.title')}
+                  </h2>
+                </div>
+
+                {/* 使用 flex 布局使时间线与经历项并排 */}
+                <div className="space-y-8">
+                  <div className="flex items-start">
+                    <div className="mr-4">
+                      <div className="w-2 h-2 bg-gradient-to-r from-yellow-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div> {/* 时间线标记 */}
+                    </div>
+                    <div className="flex-1">
+                      <ExperienceItem
+                        title={t('about.experience_section.jobs.senior.title')}
+                        company={t('about.experience_section.jobs.senior.company')}
+                        period={t('about.experience_section.jobs.senior.period')}
+                        description={t('about.experience_section.jobs.senior.description')}
+                        achievements={t('about.experience_section.jobs.senior.achievements', { returnObjects: true }) as string[]}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="mr-4">
+                      <div className="w-2 h-2 bg-gradient-to-r from-yellow-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div> {/* 时间线标记 */}
+                    </div>
+                    <div className="flex-1">
+                      <ExperienceItem
+                        title={t('about.experience_section.jobs.fullstack.title')}
+                        company={t('about.experience_section.jobs.fullstack.company')}
+                        period={t('about.experience_section.jobs.fullstack.period')}
+                        description={t('about.experience_section.jobs.fullstack.description')}
+                        achievements={t('about.experience_section.jobs.fullstack.achievements', { returnObjects: true }) as string[]}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.section>
@@ -176,13 +197,13 @@ export default function About() {
   );
 }
 
-function InfoItem({ icon, label, value }: { 
+function InfoItem({ icon, label, value }: {
   icon: React.ReactNode;
   label: string;
   value: string;
 }) {
   return (
-    <motion.div 
+    <motion.div
       variants={item}
       className="flex items-center gap-4"
     >
@@ -197,8 +218,8 @@ function InfoItem({ icon, label, value }: {
   );
 }
 
-function SkillCategory({ title, skills }: { 
-  title: string; 
+function SkillCategory({ title, skills }: {
+  title: string;
   skills: { name: string; level: number; }[];
 }) {
   return (
@@ -216,7 +237,7 @@ function SkillCategory({ title, skills }: {
             </div>
             <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-gradient-to-r from-violet-500 to-fuchsia-500"
+                className="h-full bg-gradient-to-r from-fuchsia-300 to-violet-500"
                 initial={{ width: 0 }}
                 animate={{ width: `${skill.level}%` }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -229,12 +250,12 @@ function SkillCategory({ title, skills }: {
   );
 }
 
-function ExperienceItem({ 
-  title, 
-  company, 
-  period, 
-  description, 
-  achievements 
+function ExperienceItem({
+  title,
+  company,
+  period,
+  description,
+  achievements
 }: {
   title: string;
   company: string;
@@ -245,18 +266,18 @@ function ExperienceItem({
   return (
     <motion.div
       variants={item}
-      className="space-y-4 p-6 rounded-xl bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50"
+      className="space-y-4 p-6 rounded-sm bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50"
     >
       <div>
         <h3 className="text-lg font-semibold text-zinc-200">{title}</h3>
         <p className="text-zinc-400">{company} · {period}</p>
       </div>
-      <p className="text-zinc-400">{description}</p>
+      <p className="text-zinc-400 text-sm">{description}</p>
       <ul className="space-y-2">
         {achievements?.map((achievement, index) => (
-          <li key={index} className="flex items-start gap-2 text-zinc-400">
-            <span className="mt-1.5">•</span>
-            <span>{achievement}</span>
+          <li key={index} className="flex items-center gap-2 text-zinc-400">
+            <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span> {/* 时间线标记 */}
+            <span className="text-sm">{achievement}</span>
           </li>
         ))}
       </ul>

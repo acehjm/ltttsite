@@ -55,28 +55,28 @@ export default function Projects() {
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* 主渐变背景 */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(168,85,247,0.12),transparent_50%),radial-gradient(ellipse_at_bottom,rgba(20,184,166,0.12),transparent_50%)] opacity-20" />
-        
+
         {/* 网格背景 - 使用 mask 实现渐变消失效果 */}
-        <div 
+        <div
           className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
-          style={{ 
+          style={{
             maskImage: 'radial-gradient(ellipse at center, black 0%, transparent 80%)',
             WebkitMaskImage: 'radial-gradient(ellipse at center, black 0%, transparent 80%)'
           }}
         />
-        
+
         {/* 顶部渐变光晕 */}
         {/* <div className="absolute top-0 left-0 right-0 h-[600px]">
           <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-purple-500/5 to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.08),transparent_50%)]" />
         </div> */}
-        
+
         {/* 底部渐变光晕 */}
         {/* <div className="absolute bottom-0 left-0 right-0 h-[600px]">
           <div className="absolute inset-0 bg-gradient-to-t from-teal-500/10 via-teal-500/5 to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(20,184,166,0.08),transparent_50%)]" />
         </div> */}
-        
+
         {/* 动态光斑效果 */}
         <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-xl animate-[pulse_8s_ease-in-out_infinite]" />
         <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-teal-500/10 rounded-full mix-blend-multiply filter blur-xl animate-[pulse_9s_ease-in-out_infinite]" />
@@ -84,9 +84,9 @@ export default function Projects() {
       </div>
 
       <NavBar />
-      
+
       <div className="container mx-auto px-4 pt-24 pb-16 max-w-5xl">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -95,30 +95,28 @@ export default function Projects() {
           {/* 介绍部分 */}
           <div className="space-y-6">
             <div className="max-w-2xl space-y-4">
-              <motion.div 
+              <motion.span
+                className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="inline-block"
+                transition={{ duration: 0.3 }}
               >
-                <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary">
-                  Projects
-                </span>
-              </motion.div>
-              
+                Projects
+              </motion.span>
+
               <motion.div
                 variants={container}
                 initial="hidden"
                 animate="show"
                 className="space-y-4"
               >
-                <motion.p 
+                <motion.p
                   variants={item}
                   className="text-lg text-zinc-300"
                 >
                   这里是我的项目集合，每个项目都代表着我学习和挑战的过程。
                 </motion.p>
-                <motion.p 
+                <motion.p
                   variants={item}
                   className="text-zinc-400"
                 >
@@ -127,9 +125,9 @@ export default function Projects() {
               </motion.div>
             </div>
           </div>
-        
+
           {/* 项目卡片部分 */}
-          <motion.div 
+          <motion.div
             variants={container}
             initial="hidden"
             animate="show"
@@ -144,7 +142,7 @@ export default function Projects() {
                 {/* 高亮线圈 */}
                 <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-purple-500/15 to-teal-500/15 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
                 <div className="absolute -inset-[1px] rounded-xl bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),rgba(20,184,166,0.1)_70%)] opacity-0 group-hover:opacity-5 blur-[1px] transition-opacity duration-500" />
-                
+
                 <div className="relative flex flex-col h-full">
                   <div className="flex-1">
                     <div className="space-y-1 mb-3">
@@ -155,11 +153,11 @@ export default function Projects() {
                         {project.subtitle}
                       </p>
                     </div>
-                    
+
                     <p className="text-sm text-zinc-400 mb-4 line-clamp-3 group-hover:text-zinc-300 transition-colors duration-300">
                       {project.description}
                     </p>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag) => (
                         <span
