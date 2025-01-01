@@ -17,7 +17,7 @@ export const projects = [
     subtitle: "网页应用",
     description: "图片处理应用，用于实现图片的各种功能：包含图片和BASE64互转、图片格式转换、图片压缩、图片修复等。",
     tags: ["图片工具", "转换", "压缩", "修复"],
-    link: "/image",
+    link: "https://github.com/yourusername/project-three",
     image: "/images/girl.png",
     featured: true,
   },
