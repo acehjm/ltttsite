@@ -48,38 +48,38 @@ export default function About() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  {t('about.badge')}
+                  {t("about.badge")}
                 </motion.span>
               </div>
 
               <div className="grid lg:grid-cols-[2fr,1fr] gap-12">
                 <div className="space-y-6">
                   <h1 className="text-4xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
-                    {t('about.title')}
+                    {t("about.title")}
                   </h1>
                   <p className="text-lg text-zinc-400 leading-relaxed">
-                    {t('about.intro1')}
+                    {t("about.intro1")}
                   </p>
                   <p className="text-lg text-zinc-400 leading-relaxed">
-                    {t('about.intro2')}
+                    {t("about.intro2")}
                   </p>
                 </div>
 
                 <div className="space-y-8 lg:border-l lg:pl-12 lg:border-zinc-800">
                   <InfoItem
                     icon={<GlobeIcon className="w-5 h-5 text-violet-300" />}
-                    label={t('about.location.label')}
-                    value={t('about.location.value') || '-'}
+                    label={t("about.location.label")}
+                    value={t("about.location.value") || "-"}
                   />
                   <InfoItem
                     icon={<CodeIcon className="w-5 h-5 text-violet-300" />}
-                    label={t('about.experience.label')}
-                    value={t('about.experience.value')}
+                    label={t("about.experience.label")}
+                    value={t("about.experience.value")}
                   />
                   <InfoItem
                     icon={<RocketIcon className="w-5 h-5 text-violet-300" />}
-                    label={t('about.focus.label')}
-                    value={t('about.focus.value')}
+                    label={t("about.focus.label")}
+                    value={t("about.focus.value")}
                   />
                 </div>
               </div>
@@ -96,39 +96,39 @@ export default function About() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  {t('about.skills.badge')}
+                  {t("about.skills.badge")}
                 </motion.span>
                 <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
-                  {t('about.skills.title')}
+                  {t("about.skills.title")}
                 </h2>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <SkillCategory
-                  title={t('about.skills.categories.languages')}
+                  title={t("about.skills.categories.languages")}
                   skills={[
                     { name: "Rust", level: 30 },
                     { name: "JavaScript", level: 45 },
                     { name: "Java", level: 90 },
-                    { name: "SQL", level: 85 }
+                    { name: "SQL", level: 85 },
                   ]}
                 />
                 <SkillCategory
-                  title={t('about.skills.categories.frontend')}
+                  title={t("about.skills.categories.frontend")}
                   skills={[
                     { name: "React", level: 75 },
                     { name: "Remix", level: 80 },
                     { name: "TailwindCSS", level: 70 },
-                    { name: "Framer Motion", level: 65 }
+                    { name: "Framer Motion", level: 65 },
                   ]}
                 />
                 <SkillCategory
-                  title={t('about.skills.categories.backend')}
+                  title={t("about.skills.categories.backend")}
                   skills={[
                     { name: "SpringBoot", level: 90 },
                     { name: "Redis", level: 85 },
                     { name: "RabbitMQ", level: 80 },
-                    { name: "PostgreSQL", level: 85 }
+                    { name: "PostgreSQL", level: 85 },
                   ]}
                 />
               </div>
@@ -139,7 +139,10 @@ export default function About() {
           <motion.section variants={item} className="relative pb-16">
             <div className="flex flex-col">
               {/* 时间线 */}
-              <div className="absolute left-1 h-2/3 border-l border-zinc-800" style={{ top: '20%' }}></div>
+              <div
+                className="absolute left-1 h-2/3 border-l border-zinc-800"
+                style={{ top: "20%" }}
+              ></div>
 
               <div className="space-y-8 relative">
                 <div className="space-y-4">
@@ -149,10 +152,10 @@ export default function About() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {t('about.experience_section.badge')}
+                    {t("about.experience_section.badge")}
                   </motion.span>
                   <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
-                    {t('about.experience_section.title')}
+                    {t("about.experience_section.title")}
                   </h2>
                 </div>
 
@@ -160,30 +163,56 @@ export default function About() {
                 <div className="space-y-8">
                   <div className="flex items-start">
                     <div className="mr-4">
-                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div> {/* 时间线标记 */}
+                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div>{" "}
+                      {/* 时间线标记 */}
                     </div>
                     <div className="flex-1">
                       <ExperienceItem
-                        title={t('about.experience_section.jobs.senior.title')}
-                        company={t('about.experience_section.jobs.senior.company')}
-                        period={t('about.experience_section.jobs.senior.period')}
-                        description={t('about.experience_section.jobs.senior.description')}
-                        achievements={t('about.experience_section.jobs.senior.achievements', { returnObjects: true }) as string[]}
+                        title={t("about.experience_section.jobs.senior.title")}
+                        company={t(
+                          "about.experience_section.jobs.senior.company"
+                        )}
+                        period={t(
+                          "about.experience_section.jobs.senior.period"
+                        )}
+                        description={t(
+                          "about.experience_section.jobs.senior.description"
+                        )}
+                        achievements={
+                          t(
+                            "about.experience_section.jobs.senior.achievements",
+                            { returnObjects: true }
+                          ) as string[]
+                        }
                       />
                     </div>
                   </div>
 
                   <div className="flex items-start">
                     <div className="mr-4">
-                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div> {/* 时间线标记 */}
+                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div>{" "}
+                      {/* 时间线标记 */}
                     </div>
                     <div className="flex-1">
                       <ExperienceItem
-                        title={t('about.experience_section.jobs.fullstack.title')}
-                        company={t('about.experience_section.jobs.fullstack.company')}
-                        period={t('about.experience_section.jobs.fullstack.period')}
-                        description={t('about.experience_section.jobs.fullstack.description')}
-                        achievements={t('about.experience_section.jobs.fullstack.achievements', { returnObjects: true }) as string[]}
+                        title={t(
+                          "about.experience_section.jobs.fullstack.title"
+                        )}
+                        company={t(
+                          "about.experience_section.jobs.fullstack.company"
+                        )}
+                        period={t(
+                          "about.experience_section.jobs.fullstack.period"
+                        )}
+                        description={t(
+                          "about.experience_section.jobs.fullstack.description"
+                        )}
+                        achievements={
+                          t(
+                            "about.experience_section.jobs.fullstack.achievements",
+                            { returnObjects: true }
+                          ) as string[]
+                        }
                       />
                     </div>
                   </div>
@@ -197,19 +226,18 @@ export default function About() {
   );
 }
 
-function InfoItem({ icon, label, value }: {
+function InfoItem({
+  icon,
+  label,
+  value,
+}: {
   icon: React.ReactNode;
   label: string;
   value: string;
 }) {
   return (
-    <motion.div
-      variants={item}
-      className="flex items-center gap-4"
-    >
-      <div className="p-2 rounded-lg bg-violet-500/10">
-        {icon}
-      </div>
+    <motion.div variants={item} className="flex items-center gap-4">
+      <div className="p-2 rounded-lg bg-violet-500/10">{icon}</div>
       <div>
         <p className="text-sm text-zinc-400">{label}</p>
         <p className="font-medium">{value}</p>
@@ -218,9 +246,12 @@ function InfoItem({ icon, label, value }: {
   );
 }
 
-function SkillCategory({ title, skills }: {
+function SkillCategory({
+  title,
+  skills,
+}: {
   title: string;
-  skills: { name: string; level: number; }[];
+  skills: { name: string; level: number }[];
 }) {
   return (
     <motion.div
@@ -255,7 +286,7 @@ function ExperienceItem({
   company,
   period,
   description,
-  achievements
+  achievements,
 }: {
   title: string;
   company: string;
@@ -270,13 +301,16 @@ function ExperienceItem({
     >
       <div>
         <h3 className="text-lg font-semibold text-zinc-200">{title}</h3>
-        <p className="text-zinc-400">{company} · {period}</p>
+        <p className="text-zinc-400">
+          {company} · {period}
+        </p>
       </div>
       <p className="text-zinc-400 text-sm">{description}</p>
       <ul className="space-y-2">
         {achievements?.map((achievement, index) => (
           <li key={index} className="flex items-center gap-2 text-zinc-400">
-            <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span> {/* 时间线标记 */}
+            <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></span>{" "}
+            {/* 时间线标记 */}
             <span className="text-sm">{achievement}</span>
           </li>
         ))}

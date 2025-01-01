@@ -7,7 +7,11 @@ import type { MetaFunction } from "@remix-run/node";
 export const meta: MetaFunction = () => {
   return [
     { title: "lttt.dev - Software Engineer" },
-    { name: "description", content: "Personal portfolio of a software engineer passionate about creating beautiful and functional web experiences." }
+    {
+      name: "description",
+      content:
+        "Personal portfolio of a software engineer passionate about creating beautiful and functional web experiences.",
+    },
   ];
 };
 
@@ -29,7 +33,8 @@ export default function Index() {
           <motion.div
             className="absolute top-1/4 -right-20 w-[500px] h-[500px] rounded-full"
             style={{
-              background: "radial-gradient(circle at center, rgba(139, 92, 246, 0.08) 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle at center, rgba(139, 92, 246, 0.08) 0%, transparent 70%)",
             }}
             animate={{
               scale: [1, 1.2, 1],
@@ -45,7 +50,8 @@ export default function Index() {
           <motion.div
             className="absolute -bottom-20 left-1/4 w-[400px] h-[400px] rounded-full"
             style={{
-              background: "radial-gradient(circle at center, rgba(236, 72, 153, 0.08) 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle at center, rgba(236, 72, 153, 0.08) 0%, transparent 70%)",
             }}
             animate={{
               scale: [1.2, 1, 1.2],
@@ -63,7 +69,8 @@ export default function Index() {
           <motion.div
             className="absolute top-1/3 left-1/4 w-[300px] h-[300px]"
             style={{
-              background: "conic-gradient(from 0deg at 50% 50%, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05))",
+              background:
+                "conic-gradient(from 0deg at 50% 50%, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05))",
               borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
             }}
             animate={{
@@ -85,32 +92,34 @@ export default function Index() {
         {/* 网格层 */}
         <div className="absolute inset-0">
           {/* 基础网格 */}
-          <div 
+          <div
             className="absolute inset-0 opacity-[0.08]"
             style={{
               backgroundImage: `
                 linear-gradient(to right, rgb(148 163 184 / 0.1) 1px, transparent 1px),
                 linear-gradient(to bottom, rgb(148 163 184 / 0.1) 1px, transparent 1px)
               `,
-              backgroundSize: '64px 64px',
-              maskImage: 'radial-gradient(circle at 50% 50%, black, transparent 80%)',
+              backgroundSize: "64px 64px",
+              maskImage:
+                "radial-gradient(circle at 50% 50%, black, transparent 80%)",
             }}
           />
-          
+
           {/* 动态点阵 */}
           <motion.div
             className="absolute inset-0"
             style={{
-              backgroundImage: 'radial-gradient(circle at center, rgba(255,255,255,0.05) 0.5px, transparent 0.5px)',
-              backgroundSize: '32px 32px'
+              backgroundImage:
+                "radial-gradient(circle at center, rgba(255,255,255,0.05) 0.5px, transparent 0.5px)",
+              backgroundSize: "32px 32px",
             }}
             animate={{
-              backgroundPosition: ['0% 0%', '50% 50%', '0% 0%']
+              backgroundPosition: ["0% 0%", "50% 50%", "0% 0%"],
             }}
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: 'linear'
+              ease: "linear",
             }}
           />
         </div>
@@ -127,18 +136,20 @@ export default function Index() {
                 height: `${Math.random() * 3 + 1}px`,
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
-                background: `rgba(${Math.random() > 0.5 ? '139, 92, 246' : '236, 72, 153'}, 0.3)`
+                background: `rgba(${
+                  Math.random() > 0.5 ? "139, 92, 246" : "236, 72, 153"
+                }, 0.3)`,
               }}
               animate={{
                 y: [0, -30 * (Math.random() + 0.5), 0],
                 x: [0, 20 * (Math.random() + 0.5), 0],
-                opacity: [0.2, 0.5, 0.2]
+                opacity: [0.2, 0.5, 0.2],
               }}
               transition={{
                 duration: 10 + Math.random() * 5,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: i * 2
+                delay: i * 2,
               }}
             />
           ))}
@@ -151,7 +162,7 @@ export default function Index() {
               style={{
                 width: `${Math.random() * 40 + 20}px`,
                 height: `${Math.random() * 40 + 20}px`,
-                border: '1px solid rgba(139, 92, 246, 0.1)',
+                border: "1px solid rgba(139, 92, 246, 0.1)",
                 top: `${20 + Math.random() * 60}%`,
                 left: `${20 + Math.random() * 60}%`,
                 transform: `rotate(${Math.random() * 360}deg)`,
@@ -165,20 +176,20 @@ export default function Index() {
                 duration: 20 + Math.random() * 10,
                 repeat: Infinity,
                 ease: "linear",
-                delay: i * 4
+                delay: i * 4,
               }}
             />
           ))}
         </div>
 
         {/* 噪点纹理 */}
-        <div 
-          className="absolute inset-0 opacity-[0.02]" 
-          style={{ 
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            backgroundRepeat: 'repeat',
-            backgroundSize: '128px 128px'
-          }} 
+            backgroundRepeat: "repeat",
+            backgroundSize: "128px 128px",
+          }}
         />
 
         {/* 最终叠加层 */}
@@ -188,7 +199,7 @@ export default function Index() {
       {/* 内容区域 */}
       <div className="relative">
         <NavBar />
-        
+
         <main className="relative">
           {/* Hero Section */}
           <section className="container mx-auto px-4 pt-32 pb-16">
@@ -199,7 +210,7 @@ export default function Index() {
               className="max-w-5xl mx-auto space-y-8"
             >
               <div className="space-y-4">
-                <motion.div 
+                <motion.div
                   className="inline-block"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -209,23 +220,27 @@ export default function Index() {
                     Available for hire
                   </span>
                 </motion.div>
-                
-                <motion.h1 
+
+                <motion.h1
                   className="text-6xl font-bold"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                  Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">lttt</span>
+                  Hi, I'm{" "}
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
+                    lttt
+                  </span>
                 </motion.h1>
-                
-                <motion.p 
+
+                <motion.p
                   className="text-xl text-zinc-400 max-w-2xl"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.8 }}
                 >
-                  A software engineer passionate about creating beautiful and functional web experiences.
+                  A software engineer passionate about creating beautiful and
+                  functional web experiences.
                 </motion.p>
 
                 <motion.div
@@ -263,52 +278,60 @@ export default function Index() {
               className="max-w-5xl mx-auto space-y-8"
             >
               <div className="flex items-center justify-between">
-                <h2 className="text-2xl font-semibold text-zinc-100">Featured Projects</h2>
-                <Link 
+                <h2 className="text-2xl font-semibold text-zinc-100">
+                  Featured Projects
+                </h2>
+                <Link
                   to="/projects"
                   className="text-sm text-zinc-400 hover:text-pink-400 transition-colors"
                 >
                   View all projects →
                 </Link>
               </div>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                {projects.filter(project => project.featured).map((project, index) => (
-                  <Link
-                    key={index}
-                    to={project.link}
-                    className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-zinc-900 md:aspect-[3/2]"
-                  >
-                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-zinc-900/90 via-zinc-900/50 to-zinc-900/30" />
-                    {project.image && (
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 will-change-transform group-hover:scale-105"
-                      />
-                    )}
-                    <div className="absolute inset-0 z-20 flex flex-col justify-end p-4">
-                      <div className="space-y-1">
-                        <h3 className="text-lg font-medium text-white md:text-xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:via-pink-400 group-hover:to-purple-400">
-                          {project.title}
-                        </h3>
-                        <p className="text-sm text-zinc-400">{project.subtitle}</p>
-                        <p className="text-xs text-zinc-500 line-clamp-2 mt-1">{project.description}</p>
-                        
-                        <div className="flex flex-wrap gap-1.5 pt-2">
-                          {project.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="text-[10px] px-1.5 py-0.5 rounded-full bg-zinc-800/50 text-zinc-400 border border-zinc-700/50"
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                {projects
+                  .filter((project) => project.featured)
+                  .map((project, index) => (
+                    <Link
+                      key={index}
+                      to={project.link}
+                      className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-zinc-900 md:aspect-[3/2]"
+                    >
+                      <div className="absolute inset-0 z-10 bg-gradient-to-t from-zinc-900/90 via-zinc-900/50 to-zinc-900/30" />
+                      {project.image && (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 will-change-transform group-hover:scale-105"
+                        />
+                      )}
+                      <div className="absolute inset-0 z-20 flex flex-col justify-end p-4">
+                        <div className="space-y-1">
+                          <h3 className="text-lg font-medium text-white md:text-xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:via-pink-400 group-hover:to-purple-400">
+                            {project.title}
+                          </h3>
+                          <p className="text-sm text-zinc-400">
+                            {project.subtitle}
+                          </p>
+                          <p className="text-xs text-zinc-500 line-clamp-2 mt-1">
+                            {project.description}
+                          </p>
+
+                          <div className="flex flex-wrap gap-1.5 pt-2">
+                            {project.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="text-[10px] px-1.5 py-0.5 rounded-full bg-zinc-800/50 text-zinc-400 border border-zinc-700/50"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  ))}
               </div>
             </motion.div>
           </section>
