@@ -160,7 +160,7 @@ export default function About() {
                 <div className="space-y-8">
                   <div className="flex items-start">
                     <div className="mr-4">
-                      <div className="w-2 h-2 bg-gradient-to-r from-yellow-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div> {/* 时间线标记 */}
+                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div> {/* 时间线标记 */}
                     </div>
                     <div className="flex-1">
                       <ExperienceItem
@@ -175,7 +175,7 @@ export default function About() {
 
                   <div className="flex items-start">
                     <div className="mr-4">
-                      <div className="w-2 h-2 bg-gradient-to-r from-yellow-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div> {/* 时间线标记 */}
+                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div> {/* 时间线标记 */}
                     </div>
                     <div className="flex-1">
                       <ExperienceItem
