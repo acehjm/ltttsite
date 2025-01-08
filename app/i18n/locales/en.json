@@ -5,64 +5,76 @@
     "projects": "Projects",
     "contact": "Contact"
   },
-  "contact": {
-    "title": "Contact",
-    "description": "Feel free to reach out through any of these platforms. I'll get back to you as soon as possible."
-  },
   "language": {
     "en": "English",
     "zh": "中文"
   },
+  "home": {
+    "title": "Software Engineer",
+    "description": "I build accessible, inclusive products and digital experiences for the web.",
+    "hire": "Available for hire",
+    "buttons": {
+      "viewProjects": "View Projects",
+      "downloadResume": "Download Resume",
+      "viewAllProjects": "View all projects",
+      "comingSoon": "Coming soon"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "featured": "Featured"
+    },
+    "contact": "Contact Me"
+  },
   "about": {
     "badge": "About Me",
     "title": "Building digital products, brands, and experiences",
-    "intro1": "I'm a passionate software engineer with a deep love for creating innovative solutions. My journey in tech began with a curiosity about how things work, which led me to explore various aspects of software development.",
-    "intro2": "With experience in full-stack development, I've had the opportunity to work on diverse projects ranging from web applications to AI-powered solutions. I'm interested in creating user-centric applications that solve real-world problems.",
+    "intro1": "I'm a passionate software engineer who loves creating innovative solutions. My journey in technology began with curiosity about how things work, which led me to explore various aspects of software development.",
+    "intro2": "With full-stack development experience, I've had the opportunity to work on projects ranging from web applications to AI solutions. I focus on creating user-centric applications that solve real problems.",
     "location": {
       "label": "Location",
       "value": ""
     },
     "experience": {
       "label": "Experience",
-      "value": "5+ Years"
+      "value": "5+ years"
     },
     "focus": {
       "label": "Focus",
       "value": "Full Stack Development"
     },
     "skills": {
-      "badge": "Skills & Expertise",
-      "title": "Technical Proficiency",
+      "badge": "Expertise",
+      "title": "Technical Skills",
       "categories": {
-        "languages": "Languages",
-        "frontend": "Frontend",
-        "backend": "Backend"
+        "languages": "Programming Languages",
+        "frontend": "Frontend Development",
+        "backend": "Backend Development"
       }
     },
     "experience_section": {
-      "badge": "Work History",
+      "badge": "Experience",
       "title": "Professional Experience",
       "jobs": {
         "senior": {
           "title": "Senior Software Engineer",
           "company": "Tech Company",
-          "period": "2021 - Present",
-          "description": "Leading the development of web applications using React and Node.js. Implementing CI/CD pipelines and mentoring junior developers.",
+          "period": "2018 - Present",
+          "description": "Led development of web applications using SpringBoot and Java. Delivered to clients and mentored junior developers.",
           "achievements": [
-            "Reduced application load time by 40% through optimization",
-            "Led team of 5 developers in successful project delivery",
-            "Implemented automated testing increasing coverage to 85%"
+            "Optimized system performance, improving response time by 30%",
+            "Designed and implemented new microservices architecture",
+            "Mentored 3 junior developers"
           ]
         },
         "fullstack": {
           "title": "Full Stack Developer",
-          "company": "Digital Agency",
-          "period": "2019 - 2021",
-          "description": "Developed and maintained multiple client projects using various technologies including React, Django, and AWS.",
+          "company": "Tech Company",
+          "period": "2016 - 2018",
+          "description": "Developed enterprise PLM systems using React, Java, SpringBoot and other technologies.",
           "achievements": [
             "Delivered 10+ successful client projects",
             "Introduced modern development practices",
-            "Improved client satisfaction rate by 25%"
+            "Improved client satisfaction by 25%"
           ]
         }
       }

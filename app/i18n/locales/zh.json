@@ -5,13 +5,25 @@
     "projects": "项目",
     "contact": "联系"
   },
-  "contact": {
-    "title": "联系方式",
-    "description": "欢迎通过以下任何平台与我联系。我会尽快回复。"
-  },
   "language": {
     "en": "English",
     "zh": "中文"
+  },
+  "home": {
+    "title": "软件工程师",
+    "description": "我致力于构建可访问、包容的产品和数字体验。",
+    "hire": "Available for hire",
+    "buttons": {
+      "viewProjects": "查看项目",
+      "downloadResume": "下载简历",
+      "viewAllProjects": "查看全部项目",
+      "comingSoon": "即将推出"
+    },
+    "projects": {
+      "title": "精选项目",
+      "featured": "精选"
+    },
+    "contact": "与我交谈"
   },
   "about": {
     "badge": "关于我",
@@ -49,16 +61,16 @@
           "period": "2018 - 至今",
           "description": "主导使用 SrpingBoot 和 Java 开发Web应用。交付客户并指导初级开发人员。",
           "achievements": [
-            "优化应用加载时间，提高 40%",
-            "带领 5 人开发团队成功交付项目",
-            "实施自动化测试，将覆盖率提高到 85%"
+            "优化了系统性能，提升了30%的响应速度",
+            "设计并实现了新的微服务架构",
+            "指导3名初级开发人员"
           ]
         },
         "fullstack": {
           "title": "全栈开发工程师",
           "company": "科技公司",
           "period": "2016 - 2018",
-          "description": "使用包括 Kotlin、Java、React、SpringBoot 和 Gradle 在内的各种技术开发企业产品全生命周期管理系统(PLM)。",
+          "description": "使用包括 React、Java、SpringBoot 等技术开发企业产品全生命周期管理系统。",
           "achievements": [
             "成功交付 10+ 个客户项目",
             "引入现代开发实践",

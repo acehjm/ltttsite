@@ -163,56 +163,30 @@ export default function About() {
                 <div className="space-y-8">
                   <div className="flex items-start">
                     <div className="mr-4">
-                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div>{" "}
-                      {/* 时间线标记 */}
+                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div>
                     </div>
                     <div className="flex-1">
                       <ExperienceItem
                         title={t("about.experience_section.jobs.senior.title")}
-                        company={t(
-                          "about.experience_section.jobs.senior.company"
-                        )}
-                        period={t(
-                          "about.experience_section.jobs.senior.period"
-                        )}
-                        description={t(
-                          "about.experience_section.jobs.senior.description"
-                        )}
-                        achievements={
-                          t(
-                            "about.experience_section.jobs.senior.achievements",
-                            { returnObjects: true }
-                          ) as string[]
-                        }
+                        company={t("about.experience_section.jobs.senior.company")}
+                        period={t("about.experience_section.jobs.senior.period")}
+                        description={t("about.experience_section.jobs.senior.description")}
+                        achievements={t("about.experience_section.jobs.senior.achievements", { returnObjects: true }) as string[]}
                       />
                     </div>
                   </div>
 
                   <div className="flex items-start">
                     <div className="mr-4">
-                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div>{" "}
-                      {/* 时间线标记 */}
+                      <div className="w-2 h-2 bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 rounded-full shadow-lg animate-pulse"></div>
                     </div>
                     <div className="flex-1">
                       <ExperienceItem
-                        title={t(
-                          "about.experience_section.jobs.fullstack.title"
-                        )}
-                        company={t(
-                          "about.experience_section.jobs.fullstack.company"
-                        )}
-                        period={t(
-                          "about.experience_section.jobs.fullstack.period"
-                        )}
-                        description={t(
-                          "about.experience_section.jobs.fullstack.description"
-                        )}
-                        achievements={
-                          t(
-                            "about.experience_section.jobs.fullstack.achievements",
-                            { returnObjects: true }
-                          ) as string[]
-                        }
+                        title={t("about.experience_section.jobs.fullstack.title")}
+                        company={t("about.experience_section.jobs.fullstack.company")}
+                        period={t("about.experience_section.jobs.fullstack.period")}
+                        description={t("about.experience_section.jobs.fullstack.description")}
+                        achievements={t("about.experience_section.jobs.fullstack.achievements", { returnObjects: true }) as string[]}
                       />
                     </div>
                   </div>
