@@ -31,27 +31,27 @@ export default function Index() {
       <div className="fixed inset-0 overflow-hidden">
         {/* 基础渐变层 */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0F]/95 via-[#141420]/80 to-[#1A1A2E]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,166,158,0.15),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(186,135,255,0.12),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(92,205,207,0.12),transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0F]/90 via-[#141420]/70 to-[#1A1A2E]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(244,114,182,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(14,165,233,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(99,102,241,0.08),transparent_50%)]" />
         </div>
 
         {/* 动态光效层 */}
         <div className="absolute inset-0">
           {/* 主光晕 */}
           <motion.div
-            className="absolute top-1/4 -right-20 w-[600px] h-[600px] rounded-full opacity-40"
+            className="absolute top-1/4 -right-20 w-[600px] h-[600px] rounded-full opacity-30"
             style={{
               background:
-                "radial-gradient(circle at center, rgba(186,135,255, 0.15) 0%, transparent 70%)",
+                "radial-gradient(circle at center, rgba(14,165,233,0.12) 0%, transparent 70%)",
               filter: "blur(40px)",
             }}
             animate={{
               scale: [1, 1.2, 1],
               x: [0, -30, 0],
               y: [0, -30, 0],
-              opacity: [0.4, 0.6, 0.4],
+              opacity: [0.3, 0.5, 0.3],
             }}
             transition={{
               duration: 15,
@@ -60,17 +60,17 @@ export default function Index() {
             }}
           />
           <motion.div
-            className="absolute -bottom-20 left-1/4 w-[500px] h-[500px] rounded-full opacity-40"
+            className="absolute -bottom-20 left-1/4 w-[500px] h-[500px] rounded-full opacity-30"
             style={{
               background:
-                "radial-gradient(circle at center, rgba(255,166,158, 0.15) 0%, transparent 70%)",
+                "radial-gradient(circle at center, rgba(244,114,182,0.12) 0%, transparent 70%)",
               filter: "blur(40px)",
             }}
             animate={{
               scale: [1.2, 1, 1.2],
               x: [0, 30, 0],
               y: [0, 30, 0],
-              opacity: [0.4, 0.6, 0.4],
+              opacity: [0.3, 0.5, 0.3],
             }}
             transition={{
               duration: 12,
@@ -282,7 +282,7 @@ export default function Index() {
                   <h2 className="text-2xl font-bold text-[#E1E1E8]">
                     {t("home.projects.title")}
                   </h2>
-                  <div className="h-1 w-16 bg-gradient-to-r from-[#BA87FF] to-[#5CCCCF] rounded-full mt-2"></div>
+                  <div className="h-1 w-16 bg-gradient-to-r from-sky-300/40 via-rose-300/40 to-indigo-300/40 rounded-full mt-2"></div>
                 </div>
                 <Link
                   to="/projects"
@@ -314,28 +314,28 @@ export default function Index() {
                         />
                       </div>
 
-                      {/* 玻璃遮罩效果 - 应用于整个卡片 */}
-                      <div className="absolute inset-0 bg-[#0A0A0F]/30 backdrop-blur-[2px] group-hover:bg-[#0A0A0F]/60 transition-all duration-300"></div>
+                      {/* 玻璃遮罩效果 */}
+                      <div className="absolute inset-0 bg-zinc-900/40 backdrop-blur-[2px] group-hover:bg-zinc-900/50 transition-all duration-300"></div>
 
-                      {/* 渐变遮罩 - 增强文本可读性 */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0F]/90 to-transparent"></div>
+                      {/* 渐变遮罩 */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/50 to-transparent"></div>
 
-                      {/* 项目信息 - 位于遮罩上层 */}
+                      {/* 项目信息 */}
                       <div className="relative h-full p-5 flex flex-col justify-end z-10">
-                        <h3 className="text-base font-medium text-[#E1E1E8] mb-1.5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#BA87FF] group-hover:to-[#5CCCCF] transition-colors duration-300">
+                        <h3 className="text-base font-medium text-zinc-100 mb-1.5 group-hover:text-rose-300/70 transition-colors duration-300">
                           {project.title}
                         </h3>
-                        <p className="text-sm text-[#E1E1E8]/70 mb-2">
+                        <p className="text-sm text-zinc-400 mb-2">
                           {project.subtitle}
                         </p>
-                        <p className="text-xs text-[#E1E1E8]/60 mb-3 line-clamp-2">
+                        <p className="text-xs text-zinc-500 mb-3 line-clamp-2">
                           {project.description}
                         </p>
                         <div className="flex flex-wrap gap-1.5 mt-auto">
                           {project.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-2 py-0.5 text-xs rounded-full bg-[#BA87FF]/10 text-[#BA87FF] border border-[#BA87FF]/10 backdrop-blur-sm"
+                              className="px-2 py-0.5 text-xs rounded-full bg-rose-300/[0.03] text-rose-300/40 border border-rose-300/[0.05] backdrop-blur-sm"
                             >
                               {tag}
                             </span>
@@ -356,14 +356,14 @@ export default function Index() {
           </section>
 
           {/* Footer Section */}
-          <footer className="relative w-full mt-32">
+          <footer className="relative w-full mt-24">
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40 backdrop-blur-xl"></div>
-            <div className="relative max-w-3xl mx-auto px-4 py-12">
+            <div className="relative max-w-3xl mx-auto px-4 py-8">
               <div className="grid grid-cols-2 gap-8">
                 {/* Connect Column */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <h3 className="text-[#E1E1E8] text-sm font-medium">Connect</h3>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-3">
                     {contacts.map((contact) => (
                       <a
                         key={contact.platform}
@@ -372,7 +372,7 @@ export default function Index() {
                         rel={contact.link.startsWith("mailto:") ? undefined : "noopener noreferrer"}
                         className="flex items-center gap-2 text-[#E1E1E8]/60 hover:text-[#E1E1E8] text-sm transition-colors duration-200"
                       >
-                        <span className="w-4 h-4">{contact.icon}</span>
+                        <span className="w-4 h-4 flex items-center justify-center">{contact.icon}</span>
                         <span>{contact.platform}</span>
                       </a>
                     ))}
@@ -380,7 +380,7 @@ export default function Index() {
                 </div>
 
                 {/* Subscribe Column */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <h3 className="text-[#E1E1E8] text-sm font-medium">Subscribe to my newsletter</h3>
                   <p className="text-[#E1E1E8]/60 text-sm">
                     Stay updated on new projects and tech articles.
@@ -389,9 +389,9 @@ export default function Index() {
                     <input
                       type="email"
                       placeholder="you@domain.com"
-                      className="flex-1 px-3 py-1.5 bg-white/5 border border-white/10 rounded-md text-sm text-[#E1E1E8] placeholder-[#E1E1E8]/40 focus:outline-none focus:border-white/20 transition-colors duration-200"
+                      className="w-[60%] px-2.5 py-1.5 bg-white/5 border border-white/10 rounded-md text-xs text-[#E1E1E8] placeholder-[#E1E1E8]/40 focus:outline-none focus:border-white/20 transition-colors duration-200"
                     />
-                    <button className="px-4 py-1.5 bg-[#8585af] text-black rounded-md text-sm font-medium hover:bg-gray-50 transition-colors duration-200">
+                    <button className="px-3 py-1.5 bg-[#afafc2] text-black rounded-md text-xs font-medium hover:bg-gray-50 transition-colors duration-200">
                       Subscribe
                     </button>
                   </div>
