@@ -79,5 +79,11 @@
         }
       }
     }
+  },
+  "projects": {
+    "badge": "Projects",
+    "welcome": "Welcome to my project world! Here I document every journey of exploring the unknown and pushing boundaries.",
+    "description": "As a passionate developer, I'm dedicated to crafting creative digital experiences. Each project embodies my relentless pursuit of performance and deep consideration for user experience, perfectly blending technical innovation with human-centered design.",
+    "viewProject": "View"
   }
 }

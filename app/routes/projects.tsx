@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { NavBar } from "~/components/nav-bar";
 import { Link } from "@remix-run/react";
 import { projects } from "~/data/projects";
+import { useTranslation } from "react-i18next";
 
 const container = {
   hidden: { opacity: 0 },
@@ -20,39 +21,29 @@ const item = {
 };
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-zinc-950">
       {/* 背景装饰 */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* 主渐变背景 */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(168,85,247,0.12),transparent_50%),radial-gradient(ellipse_at_bottom,rgba(20,184,166,0.12),transparent_50%)] opacity-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(14,165,233,0.08),transparent_50%),radial-gradient(ellipse_at_bottom,rgba(79,70,229,0.08),transparent_50%)] opacity-20" />
 
-        {/* 网格背景 - 使用 mask 实现渐变消失效果 */}
+        {/* 网格背景 */}
         <div
           className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
           style={{
             maskImage:
-              "radial-gradient(ellipse at center, black 0%, transparent 80%)",
+              "radial-gradient(ellipse at center, black 0%, transparent 70%)",
             WebkitMaskImage:
-              "radial-gradient(ellipse at center, black 0%, transparent 80%)",
+              "radial-gradient(ellipse at center, black 0%, transparent 70%)",
           }}
         />
 
-        {/* 顶部渐变光晕 */}
-        {/* <div className="absolute top-0 left-0 right-0 h-[600px]">
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-purple-500/5 to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.08),transparent_50%)]" />
-        </div> */}
-
-        {/* 底部渐变光晕 */}
-        {/* <div className="absolute bottom-0 left-0 right-0 h-[600px]">
-          <div className="absolute inset-0 bg-gradient-to-t from-teal-500/10 via-teal-500/5 to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(20,184,166,0.08),transparent_50%)]" />
-        </div> */}
-
         {/* 动态光斑效果 */}
-        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-xl animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-teal-500/10 rounded-full mix-blend-multiply filter blur-xl animate-[pulse_9s_ease-in-out_infinite]" />
+        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-sky-500/5 rounded-full mix-blend-multiply filter blur-xl animate-[pulse_8s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-indigo-500/5 rounded-full mix-blend-multiply filter blur-xl animate-[pulse_9s_ease-in-out_infinite]" />
       </div>
 
       <NavBar />
@@ -68,12 +59,12 @@ export default function Projects() {
           <div className="space-y-6">
             <div className="max-w-2xl space-y-4">
               <motion.span
-                className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-300"
+                className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-sky-400/10 text-sky-300/60"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                Projects
+                {t("projects.badge")}
               </motion.span>
 
               <motion.div
@@ -83,11 +74,10 @@ export default function Projects() {
                 className="space-y-4"
               >
                 <motion.p variants={item} className="text-lg text-zinc-300">
-                  这里是我的项目集合，每个项目都代表着我学习和挑战的过程。
+                  {t("projects.welcome")}
                 </motion.p>
                 <motion.p variants={item} className="text-zinc-400">
-                  我专注于创建现代化、性能优异的应用程序，提供卓越的用户体验。我的技术栈通常包括
-                  React/Remix、TypeScript 和现代 CSS 解决方案。
+                  {t("projects.description")}
                 </motion.p>
               </motion.div>
             </div>
@@ -104,49 +94,23 @@ export default function Projects() {
               <motion.div
                 key={project.title}
                 variants={item}
-                className="group relative bg-zinc-900/50 backdrop-blur-sm rounded-xl p-6 hover:bg-zinc-900/60 border border-purple-500/20 hover:border-teal-500/20 transition-all duration-300"
+                className="group relative bg-zinc-900/40 backdrop-blur-sm rounded-xl p-6 hover:bg-zinc-900/50 border border-sky-500/10 hover:border-rose-300/20 transition-all duration-300"
               >
-                {/* 高亮线圈 */}
-                <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-purple-500/15 to-teal-500/15 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
-                <div className="absolute -inset-[1px] rounded-xl bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),rgba(20,184,166,0.1)_70%)] opacity-0 group-hover:opacity-5 blur-[1px] transition-opacity duration-500" />
+                {/* 高亮效果 */}
+                <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-sky-500/10 to-rose-300/10 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
 
                 <div className="relative flex flex-col h-full">
-                  <div className="flex-1">
-                    <div className="space-y-1 mb-3">
-                      <h3 className="text-lg font-semibold text-zinc-100 group-hover:text-purple-400 transition-colors duration-300">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm text-zinc-500 font-medium group-hover:text-zinc-400 transition-colors duration-300">
-                        {project.subtitle}
-                      </p>
-                    </div>
-
-                    <p className="text-sm text-zinc-400 mb-4 line-clamp-3 group-hover:text-zinc-300 transition-colors duration-300">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs px-2 py-1 rounded-full bg-zinc-800/50 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-300 transition-all duration-300"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex justify-end mt-auto">
+                  {/* 右上角链接 */}
+                  <div className="absolute top-0 right-0">
                     <Link
                       to={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm text-zinc-400 hover:text-purple-400 group/link"
+                      className="inline-flex items-center text-xs text-zinc-500 hover:text-sky-300/50 group/link"
                     >
-                      进入项目
+                      {t("projects.viewProject")}
                       <svg
-                        className="ml-1 w-4 h-4 group-hover/link:translate-x-0.5 transition-transform"
+                        className="ml-0.5 w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -159,6 +123,33 @@ export default function Projects() {
                         />
                       </svg>
                     </Link>
+                  </div>
+
+                  <div className="flex-1 space-y-3">
+                    <div className="space-y-1">
+                      <h3 className="text-lg font-semibold text-zinc-100 group-hover:text-sky-300/80 transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-zinc-500 font-medium group-hover:text-zinc-400 transition-colors duration-300">
+                        {project.subtitle}
+                      </p>
+                    </div>
+
+                    <p className="text-sm text-zinc-400 line-clamp-3 group-hover:text-zinc-300 transition-colors duration-300">
+                      {project.description}
+                    </p>
+
+                    {/* 标签上移 */}
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-2.5 py-1 rounded-full bg-zinc-800/40 text-zinc-400 hover:bg-zinc-800/60 hover:text-zinc-300 transition-all duration-300"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </motion.div>
