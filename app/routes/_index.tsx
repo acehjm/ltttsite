@@ -63,7 +63,7 @@ export default function Index() {
             className="absolute -bottom-20 left-1/4 w-[500px] h-[500px] rounded-full opacity-30"
             style={{
               background:
-                "radial-gradient(circle at center, rgba(244,114,182,0.12) 0%, transparent 70%)",
+                "radial-gradient(circle at center, rgba(14,165,233,0.12) 0%, transparent 70%)",
               filter: "blur(40px)",
             }}
             animate={{
@@ -84,7 +84,7 @@ export default function Index() {
             className="absolute top-1/3 left-1/4 w-[400px] h-[400px] opacity-30"
             style={{
               background:
-                "conic-gradient(from 0deg at 50% 50%, rgba(186,135,255, 0.15), rgba(255,166,158, 0.15), rgba(92,205,207, 0.15))",
+                "conic-gradient(from 0deg at 50% 50%, rgba(186,135,255, 0.15), rgba(92,205,207, 0.15))",
               borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
               filter: "blur(40px)",
             }}
@@ -108,7 +108,7 @@ export default function Index() {
           {[...Array(12)].map((_, i) => (
             <motion.div
               key={`particle-${i}`}
-              className="absolute w-1 h-1 rounded-full bg-gradient-to-r from-[#BA87FF] to-[#5CCCCF]"
+              className="absolute w-1 h-1 rounded-full bg-gradient-to-r from-[#5CCCCF] to-[#5CCCCF]"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -202,7 +202,7 @@ export default function Index() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
                 >
-                  <span className="group px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-[#BA87FF]/20 to-[#5CCCCF]/20 text-[#BA87FF] border border-[#BA87FF]/30 hover:border-[#BA87FF]/40 transition-all duration-300 cursor-pointer backdrop-blur-sm">
+                  <span className="group px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-rose-200/20 to-rose-100/20 text-rose-200/70 border border-rose-200/20 hover:border-rose-200/30 transition-all duration-300 cursor-pointer backdrop-blur-sm">
                     <span className="mr-2">✨</span>
                     {t("home.hire")}
                     <span className="inline-block transition-transform group-hover:translate-x-1">↓</span>
@@ -217,8 +217,8 @@ export default function Index() {
                 >
                   Hi, I'm{" "}
                   <span className="relative">
-                    <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-[#BA87FF] via-[#FFA69E] to-[#5CCCCF] opacity-20"></span>
-                    <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-[#BA87FF] via-[#FFA69E] to-[#5CCCCF] hover:from-[#C69FFF] hover:via-[#FFB8B2] hover:to-[#6EDEE1] transition-all duration-300">
+                    <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-purple-400 via-sky-400 through-rose-400 to-indigo-400 opacity-20"></span>
+                    <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-sky-400 through-rose-400 to-indigo-400 hover:from-purple-300 hover:via-sky-300 hover:through-rose-300 hover:to-indigo-300 transition-all duration-300">
                       lttt
                     </span>
                   </span>
@@ -243,12 +243,12 @@ export default function Index() {
                     href="https://github.com/acehjm"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#8B5CF6]/80 via-[#A78BFA]/70 to-[#C4B5FD]/60 text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 hover:scale-[1.02] relative overflow-hidden"
+                    className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-sky-500/60 to-indigo-500/60 text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20 hover:scale-[1.02] relative overflow-hidden"
                   >
                     <span className="relative z-10">
                       GitHub Profile
                     </span>
-                    <span className="absolute inset-0 bg-white/20 blur-2xl scale-[2] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-sky-400/40 to-indigo-400/40 blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                     <span className="inline-block transition-transform group-hover:translate-x-1 relative z-10">→</span>
                   </a>
                   {/* <div className="relative group">
@@ -322,7 +322,7 @@ export default function Index() {
 
                       {/* 项目信息 */}
                       <div className="relative h-full p-5 flex flex-col justify-end z-10">
-                        <h3 className="text-base font-medium text-zinc-100 mb-1.5 group-hover:text-rose-300/70 transition-colors duration-300">
+                        <h3 className="text-base font-medium text-zinc-100 mb-1.5 group-hover:text-indigo-300/70 transition-colors duration-300">
                           {project.title}
                         </h3>
                         <p className="text-sm text-zinc-400 mb-2">
@@ -335,7 +335,7 @@ export default function Index() {
                           {project.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-2 py-0.5 text-xs rounded-full bg-rose-300/[0.03] text-rose-300/40 border border-rose-300/[0.05] backdrop-blur-sm"
+                              className="px-2 py-0.5 text-xs rounded-full bg-indigo-300/[0.03] text-indigo-300/40 border border-indigo-300/[0.05] backdrop-blur-sm"
                             >
                               {tag}
                             </span>
