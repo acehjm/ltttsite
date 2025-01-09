@@ -315,7 +315,7 @@ export default function Index() {
                       </div>
 
                       {/* 玻璃遮罩效果 - 应用于整个卡片 */}
-                      <div className="absolute inset-0 bg-[#0A0A0F]/70 backdrop-blur-[2px] group-hover:bg-[#0A0A0F]/60 transition-all duration-300"></div>
+                      <div className="absolute inset-0 bg-[#0A0A0F]/30 backdrop-blur-[2px] group-hover:bg-[#0A0A0F]/60 transition-all duration-300"></div>
 
                       {/* 渐变遮罩 - 增强文本可读性 */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0F]/90 to-transparent"></div>
@@ -389,9 +389,9 @@ export default function Index() {
                     <input
                       type="email"
                       placeholder="you@domain.com"
-                      className="flex-1 px-3 py-2 bg-white/5 border border-white/10 rounded-md text-sm text-[#E1E1E8] placeholder-[#E1E1E8]/40 focus:outline-none focus:border-white/20 transition-colors duration-200"
+                      className="flex-1 px-3 py-1.5 bg-white/5 border border-white/10 rounded-md text-sm text-[#E1E1E8] placeholder-[#E1E1E8]/40 focus:outline-none focus:border-white/20 transition-colors duration-200"
                     />
-                    <button className="px-4 py-2 bg-[#E1E1E8] text-black rounded-md text-sm font-medium hover:bg-white transition-colors duration-200">
+                    <button className="px-4 py-1.5 bg-[#8585af] text-black rounded-md text-sm font-medium hover:bg-gray-50 transition-colors duration-200">
                       Subscribe
                     </button>
                   </div>
