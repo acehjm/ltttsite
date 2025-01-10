@@ -10,6 +10,7 @@ import {
 } from "@remix-run/react";
 import { AnimatePresence, motion } from 'framer-motion';
 import './i18n/i18n';
+import { useTranslation } from 'react-i18next';
 import styles from "./tailwind.css?url";
 
 export const links: LinksFunction = () => [
@@ -18,9 +19,10 @@ export const links: LinksFunction = () => [
 
 export default function App() {
   const location = useLocation();
+  const { i18n } = useTranslation();
 
   return (
-    <html lang="en" className="dark antialiased">
+    <html lang={i18n.language} className="dark antialiased">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
