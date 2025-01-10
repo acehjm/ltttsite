@@ -6,27 +6,29 @@ import { i18nConfig } from './i18n.config';
 import en from './locales/en.json';
 import zh from './locales/zh.json';
 
-if (typeof window !== 'undefined') {
-  i18n
-    .use(LanguageDetector)
-    .use(initReactI18next)
-    .init({
-      ...i18nConfig,
-      resources: {
-        en: {
-          translation: en,
-        },
-        zh: {
-          translation: zh,
-        },
+// Initialize i18next instance
+i18n
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .init({
+    ...i18nConfig,
+    resources: {
+      en: {
+        translation: en,
       },
-      detection: {
-        order: ['navigator', 'htmlTag'],
+      zh: {
+        translation: zh,
       },
-      interpolation: {
-        escapeValue: false,
-      },
-    });
-}
+    },
+    detection: {
+      order: ['navigator', 'htmlTag'],
+      caches: ['localStorage'],
+    },
+    interpolation: {
+      escapeValue: false,
+    },
+  }).catch((error) => {
+    console.error('Error initializing i18n:', error);
+  });
 
 export default i18n;
