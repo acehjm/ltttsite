@@ -28,13 +28,14 @@ export default function App() {
         <Links />
       </head>
       <body className="min-h-screen bg-zinc-950 text-zinc-50">
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait">
           <motion.main
             key={location.pathname}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.15 }}
+            transition={{ duration: 0.15, ease: "easeInOut" }}
+            className="relative"
           >
             <Outlet />
           </motion.main>

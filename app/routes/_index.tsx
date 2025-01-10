@@ -134,10 +134,11 @@ export default function Index() {
             <div className="max-w-5xl mx-auto space-y-12">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="group px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-rose-200/20 to-rose-100/20 text-rose-200/70 border border-rose-200/20 hover:border-rose-200/30 transition-all duration-300 cursor-pointer backdrop-blur-sm">
+                  <span className="group inline-block px-5 py-2.5 rounded-lg bg-white/[0.02] hover:bg-violet-500/[0.03] border border-white/[0.05] backdrop-blur-md transition-colors duration-300">
                     <span className="mr-2">✨</span>
-                    {t("home.hire")}
-                    <span className="inline-block transition-transform group-hover:translate-x-1">↓</span>
+                    <span className="text-violet-300/60 font-medium text-sm">
+                      {t("home.hire")}
+                    </span>
                   </span>
                 </div>
 
