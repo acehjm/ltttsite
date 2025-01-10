@@ -1,8 +1,8 @@
 export const contacts = [
   {
     platform: "Email",
-    value: "majh.dkl@gmail.com",
-    link: "mailto:majh.dkl@gmail.com",
+    value: "#@gmail.com",
+    link: "mailto:#@gmail.com",
     icon: (
       <svg
         className="w-5 h-5"
@@ -43,8 +43,8 @@ export const contacts = [
   },
   {
     platform: "X",
-    value: "x.com/zzzerozzz0",
-    link: "https://x.com/zzzerozzz0",
+    value: "x.com/x",
+    link: "https://x.com/x",
     icon: (
       <svg
         className="w-5 h-5"
@@ -64,7 +64,7 @@ export const contacts = [
   },
   {
     platform: "WeChat",
-    value: "UltttNhs",
+    value: "UltttNhsoic",
     link: "#",
     icon: (
       <svg

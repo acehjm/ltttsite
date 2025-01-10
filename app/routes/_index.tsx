@@ -26,7 +26,13 @@ export default function Index() {
   const { t } = useTranslation();
 
   return (
-    <div className="relative min-h-screen w-full bg-[#0A0A0F]">
+    <motion.div
+      className="relative min-h-screen w-full bg-[#0A0A0F]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       {/* 动态背景 */}
       <div className="fixed inset-0 overflow-hidden">
         {/* 基础渐变层 */}
@@ -401,6 +407,6 @@ export default function Index() {
           </footer>
         </main>
       </div>
-    </div>
+    </motion.div>
   );
 }
