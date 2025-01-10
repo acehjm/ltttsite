@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "lttt.dev - Software Engineer" },
+    { title: "lttt.dev" },
     {
       name: "description",
       content:
@@ -25,107 +25,31 @@ export default function Index() {
   const { t } = useTranslation();
 
   return (
-    <div className="relative min-h-screen w-full bg-[#0A0A0F]">
+    <div className="relative min-h-screen w-full bg-[#0A0A0F] font-['PixelBody']">
       {/* 动态背景 */}
       <div className="fixed inset-0 overflow-hidden">
         {/* 基础渐变层 */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0F]/90 via-[#141420]/70 to-[#1A1A2E]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(244,114,182,0.08),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(14,165,233,0.08),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(99,102,241,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0F]/95 via-[#141420]/80 to-[#1A1A2E]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,166,158,0.15),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(186,135,255,0.12),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(92,205,207,0.12),transparent_50%)]" />
         </div>
 
         {/* 动态光效层 */}
         <div className="absolute inset-0">
-          {/* 主光晕 */}
           <div
-            className="absolute top-1/4 -right-20 w-[600px] h-[600px] rounded-full opacity-30"
+            className="absolute top-1/4 -right-20 w-[600px] h-[600px] rounded-full opacity-40"
             style={{
-              background:
-                "radial-gradient(circle at center, rgba(14,165,233,0.12) 0%, transparent 70%)",
+              background: "radial-gradient(circle at center, rgba(186,135,255, 0.15) 0%, transparent 70%)",
               filter: "blur(40px)",
-            }}
-          />
-          <div
-            className="absolute -bottom-20 left-1/4 w-[500px] h-[500px] rounded-full opacity-30"
-            style={{
-              background:
-                "radial-gradient(circle at center, rgba(14,165,233,0.12) 0%, transparent 70%)",
-              filter: "blur(40px)",
-            }}
-          />
-
-          {/* 新增的动态元素 */}
-          <div
-            className="absolute top-1/3 left-1/4 w-[400px] h-[400px] opacity-30"
-            style={{
-              background:
-                "conic-gradient(from 0deg at 50% 50%, rgba(186,135,255, 0.15), rgba(92,205,207, 0.15))",
-              borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
-              filter: "blur(40px)",
-            }}
-          />
-
-          {/* 流动粒子效果 */}
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={`particle-${i}`}
-              className="absolute w-1 h-1 rounded-full bg-gradient-to-r from-[#5CCCCF] to-[#5CCCCF]"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                opacity: 0.4,
-                scale: Math.random() * 0.5 + 0.5,
-                filter: "blur(1px)",
-              }}
-            />
-          ))}
-        </div>
-
-        {/* 网格层 */}
-        <div className="absolute inset-0">
-          {/* 基础网格 */}
-          <div
-            className="absolute inset-0 opacity-[0.05]"
-            style={{
-              backgroundImage: `
-                linear-gradient(to right, rgb(148 163 184 / 0.1) 1px, transparent 1px),
-                linear-gradient(to bottom, rgb(148 163 184 / 0.1) 1px, transparent 1px)
-              `,
-              backgroundSize: "64px 64px",
-              maskImage:
-                "radial-gradient(circle at 50% 50%, black, transparent 70%)",
-            }}
-          />
-
-          {/* 动态点阵 */}
-          <div
-            className="absolute inset-0 opacity-[0.07]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at center, rgba(255,255,255,0.1) 0.5px, transparent 0.5px)",
-              backgroundSize: "24px 24px",
             }}
           />
         </div>
-
-        {/* 噪点纹理 */}
-        <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            backgroundRepeat: "repeat",
-            backgroundSize: "128px 128px",
-          }}
-        />
-
-        {/* 最终叠加层 */}
-        <div className="absolute inset-0 bg-[#0A0A0F]/5 backdrop-blur-[1px]" />
       </div>
 
       {/* 内容区域 */}
-      <div className="relative font-['Outfit']">
+      <div className="relative">
         <NavBar />
 
         <main className="relative">
@@ -142,11 +66,12 @@ export default function Index() {
                   </span>
                 </div>
 
-                <h1 className="text-7xl font-bold tracking-tight">
-                  Hi, I'm{" "}
+                <h1 className="text-6xl font-bold tracking-tight">
+                {t("home.title")},  {" "}
+                  <span className="text-7xl">I'm{" "} </span>
                   <span className="relative">
-                    <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-purple-400 via-sky-400 through-rose-400 to-indigo-400 opacity-20"></span>
-                    <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-sky-400 through-rose-400 to-indigo-400 hover:from-purple-300 hover:via-sky-300 hover:through-rose-300 hover:to-indigo-300 transition-all duration-300">
+                    <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-rose-400 via-sky-400 through-rose-400 to-indigo-400 opacity-20"></span>
+                    <span className="text-7xl relative bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-rose-300 through-purple-400 to-sky-400 hover:from-purple-300 hover:via-sky-300 hover:through-rose-300 hover:to-indigo-300 transition-all duration-300">
                       lttt
                     </span>
                   </span>

@@ -44,10 +44,13 @@ export function NavBar() {
     return () => window.removeEventListener("scroll", updateScrolled)
   }, [])
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng)
-    setIsOpen(false)
-  }
+  const handleLanguageChange = (newLang: string) => {
+    i18n.changeLanguage(newLang).then(() => {
+      localStorage.setItem('i18nextLng', newLang);
+      document.documentElement.lang = newLang;
+      setIsOpen(false); // 关闭下拉框
+    });
+  };
   
   return (
     <motion.header
@@ -71,18 +74,14 @@ export function NavBar() {
       
       <nav className="container mx-auto px-4 h-12 relative">
         <div className="flex items-center justify-between h-full max-w-5xl mx-auto">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          <Link
+            to="/"
+            className="relative"
           >
-            <Link 
-              to="/" 
-              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-fuchsia-400"
-            >
+            <span className="font-['PixelFont'] text-lg bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-rose-300 through-purple-300 to-indigo-300">
               lttt.dev
-            </Link>
-          </motion.div>
+            </span>
+          </Link>
           
           <div className="flex items-center gap-4">
             <motion.ul 
@@ -157,10 +156,7 @@ export function NavBar() {
                     className="absolute top-full right-0 mt-2 py-1.5 w-20 rounded-lg bg-zinc-900/90 border border-zinc-800 shadow-lg backdrop-blur-sm"
                   >
                     <button
-                      onClick={() => {
-                        i18n.changeLanguage('en');
-                        setIsOpen(false);
-                      }}
+                      onClick={() => handleLanguageChange('en')}
                       className={`w-full px-3 py-1 text-left hover:bg-zinc-800/50 transition-colors flex items-center gap-2
                         ${i18n.language === 'en' ? 'text-zinc-200' : 'text-zinc-400'} text-xs`}
                     >
@@ -176,10 +172,7 @@ export function NavBar() {
                       )}
                     </button>
                     <button
-                      onClick={() => {
-                        i18n.changeLanguage('zh');
-                        setIsOpen(false);
-                      }}
+                      onClick={() => handleLanguageChange('zh')}
                       className={`w-full px-3 py-1 text-left hover:bg-zinc-800/50 transition-colors flex items-center gap-2
                         ${i18n.language === 'zh' ? 'text-zinc-200' : 'text-zinc-400'} text-xs`}
                     >
