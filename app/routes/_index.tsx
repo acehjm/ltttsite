@@ -70,8 +70,8 @@ export default function Index() {
                 {t("home.title")},  {" "}
                   <span className="text-7xl">I'm{" "} </span>
                   <span className="relative">
-                    <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-rose-400 via-sky-400 through-rose-400 to-indigo-400 opacity-20"></span>
-                    <span className="text-7xl relative bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-rose-300 through-purple-400 to-sky-400 hover:from-purple-300 hover:via-sky-300 hover:through-rose-300 hover:to-indigo-300 transition-all duration-300">
+                    <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-rose-400/40 via-sky-400 through-rose-400 to-indigo-400 opacity-20"></span>
+                    <span className="text-7xl relative bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-rose-300/40 through-purple-400 to-sky-400/30 hover:from-purple-300 hover:via-sky-300 hover:through-rose-300 hover:to-indigo-300 transition-all duration-300">
                       lttt
                     </span>
                   </span>

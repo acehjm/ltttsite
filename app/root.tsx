@@ -1,4 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
+import { Analytics } from "@vercel/analytics/remix"
+import { SpeedInsights } from "@vercel/speed-insights/remix"
 import {
   Links,
   LiveReload,
@@ -47,6 +49,8 @@ export default function App() {
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </I18nextProvider>

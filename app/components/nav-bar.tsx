@@ -78,7 +78,7 @@ export function NavBar() {
             to="/"
             className="relative"
           >
-            <span className="font-['PixelFont'] text-lg bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-rose-300 through-purple-300 to-indigo-300">
+            <span className="font-['PixelFont'] text-lg bg-clip-text text-transparent bg-gradient-to-r from-sky-300/70 via-rose-300/70 through-purple-300 to-indigo-300/30">
               lttt.dev
             </span>
           </Link>
