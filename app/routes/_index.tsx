@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "@remix-run/react";
 import { NavBar } from "~/components/nav-bar";
 import { projects } from "~/data/projects";
@@ -26,13 +25,7 @@ export default function Index() {
   const { t } = useTranslation();
 
   return (
-    <motion.div
-      className="relative min-h-screen w-full bg-[#0A0A0F]"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div className="relative min-h-screen w-full bg-[#0A0A0F]">
       {/* 动态背景 */}
       <div className="fixed inset-0 overflow-hidden">
         {/* 基础渐变层 */}
@@ -46,47 +39,25 @@ export default function Index() {
         {/* 动态光效层 */}
         <div className="absolute inset-0">
           {/* 主光晕 */}
-          <motion.div
+          <div
             className="absolute top-1/4 -right-20 w-[600px] h-[600px] rounded-full opacity-30"
             style={{
               background:
                 "radial-gradient(circle at center, rgba(14,165,233,0.12) 0%, transparent 70%)",
               filter: "blur(40px)",
             }}
-            animate={{
-              scale: [1, 1.2, 1],
-              x: [0, -30, 0],
-              y: [0, -30, 0],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
           />
-          <motion.div
+          <div
             className="absolute -bottom-20 left-1/4 w-[500px] h-[500px] rounded-full opacity-30"
             style={{
               background:
                 "radial-gradient(circle at center, rgba(14,165,233,0.12) 0%, transparent 70%)",
               filter: "blur(40px)",
             }}
-            animate={{
-              scale: [1.2, 1, 1.2],
-              x: [0, 30, 0],
-              y: [0, 30, 0],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
           />
 
           {/* 新增的动态元素 */}
-          <motion.div
+          <div
             className="absolute top-1/3 left-1/4 w-[400px] h-[400px] opacity-30"
             style={{
               background:
@@ -94,25 +65,11 @@ export default function Index() {
               borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
               filter: "blur(40px)",
             }}
-            animate={{
-              rotate: [0, 360],
-              scale: [0.8, 1, 0.8],
-              borderRadius: [
-                "30% 70% 70% 30% / 30% 30% 70% 70%",
-                "70% 30% 30% 70% / 70% 70% 30% 30%",
-                "30% 70% 70% 30% / 30% 30% 70% 70%",
-              ],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-            }}
           />
 
           {/* 流动粒子效果 */}
           {[...Array(12)].map((_, i) => (
-            <motion.div
+            <div
               key={`particle-${i}`}
               className="absolute w-1 h-1 rounded-full bg-gradient-to-r from-[#5CCCCF] to-[#5CCCCF]"
               style={{
@@ -121,18 +78,6 @@ export default function Index() {
                 opacity: 0.4,
                 scale: Math.random() * 0.5 + 0.5,
                 filter: "blur(1px)",
-              }}
-              animate={{
-                y: [-20, -40, -20],
-                x: [-10, 10, -10],
-                opacity: [0.2, 0.4, 0.2],
-                scale: [1, 1.5, 1],
-              }}
-              transition={{
-                duration: 8 + Math.random() * 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: i * 0.5,
               }}
             />
           ))}
@@ -155,21 +100,12 @@ export default function Index() {
           />
 
           {/* 动态点阵 */}
-          <motion.div
+          <div
             className="absolute inset-0 opacity-[0.07]"
             style={{
               backgroundImage:
                 "radial-gradient(circle at center, rgba(255,255,255,0.1) 0.5px, transparent 0.5px)",
               backgroundSize: "24px 24px",
-            }}
-            animate={{
-              scale: [1, 1.1, 1],
-              opacity: [0.07, 0.05, 0.07],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
             }}
           />
         </div>
@@ -195,32 +131,17 @@ export default function Index() {
         <main className="relative">
           {/* Hero Section */}
           <section className="container mx-auto px-4 pt-40 pb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-5xl mx-auto space-y-12"
-            >
+            <div className="max-w-5xl mx-auto space-y-12">
               <div className="space-y-6">
-                <motion.div
-                  className="inline-block"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.2, duration: 0.5 }}
-                >
+                <div className="inline-block">
                   <span className="group px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-rose-200/20 to-rose-100/20 text-rose-200/70 border border-rose-200/20 hover:border-rose-200/30 transition-all duration-300 cursor-pointer backdrop-blur-sm">
                     <span className="mr-2">✨</span>
                     {t("home.hire")}
                     <span className="inline-block transition-transform group-hover:translate-x-1">↓</span>
                   </span>
-                </motion.div>
+                </div>
 
-                <motion.h1
-                  className="text-7xl font-bold tracking-tight"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.8 }}
-                >
+                <h1 className="text-7xl font-bold tracking-tight">
                   Hi, I'm{" "}
                   <span className="relative">
                     <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-purple-400 via-sky-400 through-rose-400 to-indigo-400 opacity-20"></span>
@@ -228,23 +149,13 @@ export default function Index() {
                       lttt
                     </span>
                   </span>
-                </motion.h1>
+                </h1>
 
-                <motion.p
-                  className="text-2xl text-[#E1E1E8]/90 max-w-2xl leading-relaxed font-light"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.8 }}
-                >
+                <p className="text-2xl text-[#E1E1E8]/90 max-w-2xl leading-relaxed font-light">
                   {t("home.description")}
-                </motion.p>
+                </p>
 
-                <motion.div
-                  className="flex gap-5 pt-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
-                >
+                <div className="flex gap-5 pt-6">
                   <a
                     href="https://github.com/acehjm"
                     target="_blank"
@@ -252,36 +163,19 @@ export default function Index() {
                     className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-sky-500/60 to-indigo-500/60 text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20 hover:scale-[1.02] relative overflow-hidden"
                   >
                     <span className="relative z-10">
-                      GitHub Profile
+                      {t("home.buttons.viewGitHubProfile")}
                     </span>
                     <span className="absolute inset-0 bg-gradient-to-r from-sky-400/40 to-indigo-400/40 blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                     <span className="inline-block transition-transform group-hover:translate-x-1 relative z-10">→</span>
                   </a>
-                  {/* <div className="relative group">
-                    <button
-                      disabled
-                      className="px-6 py-3 rounded-full bg-[#1A1A2E]/30 backdrop-blur-sm text-[#E1E1E8]/40 border border-[#BA87FF]/5 cursor-not-allowed transition-all duration-300"
-                      title={t("home.buttons.comingSoon")}
-                    >
-                      {t("home.buttons.downloadResume")}
-                    </button>
-                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#1A1A2E] text-[#E1E1E8]/60 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                      {t("home.buttons.comingSoon")}
-                    </span>
-                  </div> */}
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </section>
 
           {/* Featured Projects */}
           <section className="container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="max-w-5xl mx-auto"
-            >
+            <div className="max-w-5xl mx-auto">
               {/* 标题和查看全部链接 */}
               <div className="flex items-center justify-between mb-8">
                 <div>
@@ -304,11 +198,8 @@ export default function Index() {
                 {projects
                   .filter((project) => project.featured)
                   .map((project, index) => (
-                    <motion.div
+                    <div
                       key={project.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
                       className="group relative overflow-hidden rounded-2xl"
                     >
                       {/* 背景图片 */}
@@ -355,10 +246,10 @@ export default function Index() {
                         className="absolute inset-0 z-20"
                         aria-label={`View ${project.title} project`}
                       />
-                    </motion.div>
+                    </div>
                   ))}
               </div>
-            </motion.div>
+            </div>
           </section>
 
           {/* Footer Section */}
@@ -407,6 +298,6 @@ export default function Index() {
           </footer>
         </main>
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -1,35 +1,14 @@
-import { motion } from "framer-motion";
 import { NavBar } from "~/components/nav-bar";
 import { Link } from "@remix-run/react";
 import { projects } from "~/data/projects";
 import { useTranslation } from "react-i18next";
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
-
 export default function Projects() {
   const { t } = useTranslation();
 
   return (
-    <motion.div
+    <div
       className="relative min-h-screen w-full bg-[#0A0A0F] font-['PixelBody']"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
     >
       {/* 动态背景 */}
       <div className="fixed inset-0 overflow-hidden">
@@ -42,20 +21,11 @@ export default function Projects() {
         </div>
 
         {/* 动态光效层 */}
-        <motion.div
+        <div
           className="absolute top-1/4 -right-20 w-[600px] h-[600px] rounded-full opacity-40"
           style={{
             background: "radial-gradient(circle at center, rgba(186,135,255, 0.15) 0%, transparent 70%)",
             filter: "blur(40px)",
-          }}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
           }}
         />
 
@@ -72,22 +42,14 @@ export default function Projects() {
       <NavBar />
 
       <div className="relative container mx-auto px-4 pt-24 pb-16">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="max-w-4xl mx-auto space-y-16"
-        >
+        <div className="max-w-4xl mx-auto space-y-16">
           {/* 介绍部分 */}
           <div className="max-w-2xl space-y-6">
-            <motion.span
+            <span
               className="inline-block px-4 py-1.5 rounded-lg text-sm font-['PixelFont'] bg-violet-500/10 text-violet-300"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3 }}
             >
               {t("projects.badge")}
-            </motion.span>
+            </span>
 
             <div className="space-y-4">
               <h1 className="text-4xl font-['PixelFont'] leading-tight bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
@@ -100,16 +62,10 @@ export default function Projects() {
           </div>
 
           {/* 项目卡片部分 */}
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <motion.div
+              <div
                 key={project.title}
-                variants={item}
                 className="group relative bg-white/[0.02] backdrop-blur-sm rounded-xl border border-white/[0.05] hover:border-violet-500/10 transition-all duration-500 overflow-hidden"
               >
                 {/* 光晕效果 */}
@@ -169,11 +125,11 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

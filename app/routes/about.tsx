@@ -1,35 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 import { NavBar } from "~/components/nav-bar";
 import { CodeIcon, GlobeIcon, RocketIcon } from "@radix-ui/react-icons";
 import "../styles/fonts.css";
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
 
 export default function About() {
   const { t } = useTranslation();
 
   return (
-    <motion.div
-      className="relative min-h-screen w-full bg-[#0A0A0F] font-['PixelBody']"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div className="relative min-h-screen w-full bg-[#0A0A0F] font-['PixelBody']">
       {/* 动态背景 */}
       <div className="fixed inset-0 overflow-hidden">
         {/* 基础渐变层 */}
@@ -42,20 +20,11 @@ export default function About() {
 
         {/* 动态光效层 */}
         <div className="absolute inset-0">
-          <motion.div
+          <div
             className="absolute top-1/4 -right-20 w-[600px] h-[600px] rounded-full opacity-40"
             style={{
               background: "radial-gradient(circle at center, rgba(186,135,255, 0.15) 0%, transparent 70%)",
               filter: "blur(40px)",
-            }}
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
             }}
           />
         </div>
@@ -64,23 +33,15 @@ export default function About() {
       <div className="relative">
         <NavBar />
         <main className="container mx-auto px-4 pt-24 pb-16">
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="max-w-4xl mx-auto space-y-16"
-          >
+          <div className="max-w-4xl mx-auto space-y-16">
             {/* 简介部分 */}
-            <motion.section variants={item} className="space-y-8">
+            <section className="space-y-8">
               <div className="space-y-4">
-                <motion.span
+                <span
                   className="inline-block px-4 py-1.5 rounded-lg text-sm font-['PixelFont'] bg-violet-500/10 text-violet-300"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
                 >
                   {t("about.badge")}
-                </motion.span>
+                </span>
                 <h1 className="text-4xl font-['PixelFont'] leading-tight bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
                   {t("about.title")}
                 </h1>
@@ -112,19 +73,16 @@ export default function About() {
                   </div>
                 </div>
               </div>
-            </motion.section>
+            </section>
 
             {/* 技能部分 */}
-            <motion.section variants={item} className="space-y-8">
+            <section className="space-y-8">
               <div className="space-y-4">
-                <motion.span
+                <span
                   className="inline-block px-4 py-1.5 rounded-lg text-sm font-['PixelFont'] bg-violet-500/10 text-violet-300"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
                 >
                   {t("about.skills.badge")}
-                </motion.span>
+                </span>
                 <h2 className="text-3xl font-['PixelFont'] bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
                   {t("about.skills.title")}
                 </h2>
@@ -196,19 +154,16 @@ export default function About() {
                   ))}
                 </div>
               </div>
-            </motion.section>
+            </section>
 
             {/* 工作经验部分 */}
-            <motion.section variants={item} className="space-y-8">
+            <section className="space-y-8">
               <div className="space-y-4">
-                <motion.span
+                <span
                   className="inline-block px-4 py-1.5 rounded-lg text-sm font-['PixelFont'] bg-violet-500/10 text-violet-300"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
                 >
                   {t("about.experience_section.badge")}
-                </motion.span>
+                </span>
                 <h2 className="text-3xl font-['PixelFont'] bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-fuchsia-300 to-violet-300">
                   {t("about.experience_section.title")}
                 </h2>
@@ -230,11 +185,11 @@ export default function About() {
                   achievements={t("about.experience_section.jobs.fullstack.achievements", { returnObjects: true }) as string[]}
                 />
               </div>
-            </motion.section>
-          </motion.div>
+            </section>
+          </div>
         </main>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -272,8 +227,7 @@ function ExperienceItem({
   achievements: string[];
 }) {
   return (
-    <motion.div
-      variants={item}
+    <div
       className="p-6 rounded-lg bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.05] backdrop-blur-md transition-all duration-300 group"
     >
       <div className="space-y-4">
@@ -291,7 +245,7 @@ function ExperienceItem({
           ))}
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -323,8 +277,7 @@ function SkillCategory({
   };
 
   return (
-    <motion.div
-      variants={item}
+    <div
       className={`p-6 rounded-lg bg-white/[0.02] ${bgHoverColor[type]} border border-white/[0.05] backdrop-blur-md transition-colors duration-300`}
     >
       <h3 className="text-lg font-['PixelFont'] text-zinc-200/90 mb-6">{title}</h3>
@@ -338,29 +291,17 @@ function SkillCategory({
               </span>
             </div>
             <div className="h-1 bg-white/[0.03] rounded-full overflow-hidden">
-              <motion.div
+              <div
                 className={`h-full rounded-full bg-gradient-to-r ${gradientColors[type]}`}
                 style={{
                   backgroundSize: '200% 100%',
-                }}
-                initial={{ width: 0 }}
-                animate={{ 
                   width: `${skill.level}%`,
-                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-                }}
-                transition={{
-                  width: { duration: 1, ease: "easeOut" },
-                  backgroundPosition: {
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "linear",
-                  },
                 }}
               />
             </div>
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }

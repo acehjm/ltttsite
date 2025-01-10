@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
   useLocation,
 } from "@remix-run/react";
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import './i18n/i18n';
 import styles from "./tailwind.css?url";
 
@@ -29,7 +29,15 @@ export default function App() {
       </head>
       <body className="min-h-screen bg-zinc-950 text-zinc-50">
         <AnimatePresence mode="wait" initial={false}>
-          <Outlet key={location.pathname} />
+          <motion.main
+            key={location.pathname}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.15 }}
+          >
+            <Outlet />
+          </motion.main>
         </AnimatePresence>
         <ScrollRestoration />
         <Scripts />

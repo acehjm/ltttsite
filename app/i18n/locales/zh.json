@@ -14,7 +14,7 @@
     "description": "专注于打造优雅的数字体验，追求卓越的性能与可访问性。致力于创造连接技术与人性需求的创新解决方案，让每个产品都能创造独特价值。",
     "hire": "Available for hire",
     "buttons": {
-      "viewProjects": "查看项目",
+      "viewGitHubProfile": "GitHub Profile",
       "downloadResume": "下载简历",
       "viewAllProjects": "查看全部项目",
       "comingSoon": "即将推出"
@@ -61,9 +61,10 @@
           "period": "2018 - 至今",
           "description": "主导使用 SrpingBoot 和 Java 开发Web应用。交付客户并指导初级开发人员。",
           "achievements": [
-            "优化了系统性能，提升了30%的响应速度",
-            "设计并实现了新的微服务架构",
-            "指导3名初级开发人员"
+            "优化了系统性能，提升了 30% 的响应速度",
+            "创新性利用现有资源和技术储备，节省开发时间 40%",
+            "负责客户项目的需求调研、设计、实现和交付",
+            "指导 3 名初级开发人员"
           ]
         },
         "fullstack": {

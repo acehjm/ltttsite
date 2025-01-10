@@ -14,7 +14,7 @@
     "description": "Crafting elegant digital experiences with a focus on performance and accessibility. Passionate about building innovative solutions that bridge technology and human needs.",
     "hire": "Available for hire",
     "buttons": {
-      "viewProjects": "View Projects",
+      "viewGitHubProfile": "GitHub Profile",
       "downloadResume": "Download Resume",
       "viewAllProjects": "View all projects",
       "comingSoon": "Coming soon"
@@ -62,7 +62,8 @@
           "description": "Led development of web applications using SpringBoot and Java. Delivered to clients and mentored junior developers.",
           "achievements": [
             "Optimized system performance, improving response time by 30%",
-            "Designed and implemented new microservices architecture",
+            "DInnovative use of existing resources and technology reserves to save 40% of development time",
+            "Responsible for requirements research, design, implementation and delivery of client projects",
             "Mentored 3 junior developers"
           ]
         },
