@@ -1,90 +1,90 @@
 {
-  "nav": {
-    "home": "首页",
-    "about": "关于",
-    "projects": "项目",
-    "contact": "联系"
-  },
-  "language": {
-    "en": "English",
-    "zh": "中文"
-  },
-  "home": {
-    "title": "嗨",
-    "description": "专注于打造优雅的数字体验，追求卓越的性能与可访问性。致力于创造连接技术与人性需求的创新解决方案，让每个产品都能创造独特价值。",
-    "hire": "Available for hire",
-    "buttons": {
-      "viewGitHubProfile": "GitHub Profile",
-      "downloadResume": "下载简历",
-      "viewAllProjects": "查看全部项目",
-      "comingSoon": "即将推出"
+    "nav": {
+        "home": "首页",
+        "about": "关于",
+        "projects": "项目",
+        "contact": "联系"
+    },
+    "language": {
+        "en": "English",
+        "zh": "中文"
+    },
+    "home": {
+        "title": "嗨",
+        "description": "专注于打造优雅的数字体验，追求卓越的性能与可访问性。致力于创造连接技术与人性需求的创新解决方案，让每个产品都能创造独特价值。",
+        "hire": "Available for hire",
+        "buttons": {
+            "viewGitHubProfile": "GitHub Profile",
+            "downloadResume": "下载简历",
+            "viewAllProjects": "查看全部项目",
+            "comingSoon": "即将推出"
+        },
+        "projects": {
+            "title": "精选项目",
+            "featured": "精选"
+        },
+        "contact": "与我交谈"
+    },
+    "about": {
+        "badge": "关于我",
+        "title": "构建数字产品、品牌和体验",
+        "intro1": "我是一名充满激情的软件工程师，热爱创造创新解决方案。我的技术之旅始于对事物运作原理的好奇，这促使我探索软件开发的各个方面。",
+        "intro2": "凭借全栈开发经验，我有机会参与从网络应用到人工智能解决方案的各种项目。关注创建以用户为中心、解决实际问题的应用程序。",
+        "location": {
+            "label": "工作模式",
+            "value": ""
+        },
+        "experience": {
+            "label": "工作经验",
+            "value": "5年以上"
+        },
+        "focus": {
+            "label": "专注领域",
+            "value": "全栈开发"
+        },
+        "skills": {
+            "badge": "技能专长",
+            "title": "技术能力",
+            "categories": {
+                "languages": "编程语言",
+                "frontend": "前端开发",
+                "backend": "后端开发"
+            }
+        },
+        "experience_section": {
+            "badge": "工作经历",
+            "title": "专业经验",
+            "jobs": {
+                "senior": {
+                    "title": "高级软件工程师",
+                    "company": "科技公司",
+                    "period": "2018 - 至今",
+                    "description": "主导使用 SrpingBoot 和 Java 开发Web应用。交付客户并指导初级开发人员。",
+                    "achievements": [
+                        "优化了系统性能，提升了 30% 的响应速度",
+                        "创新性利用现有资源和技术储备，节省开发时间 40%",
+                        "负责客户项目的需求调研、设计、实现和交付",
+                        "指导 3 名初级开发人员"
+                    ]
+                },
+                "fullstack": {
+                    "title": "全栈开发工程师",
+                    "company": "科技公司",
+                    "period": "2016 - 2018",
+                    "description": "使用包括 React、Java、SpringBoot 等技术开发企业产品全生命周期管理系统。",
+                    "achievements": [
+                        "成功交付 10+ 个客户项目",
+                        "引入现代开发实践",
+                        "客户满意度提升 25%"
+                    ]
+                }
+            }
+        }
     },
     "projects": {
-      "title": "精选项目",
-      "featured": "精选"
-    },
-    "contact": "与我交谈"
-  },
-  "about": {
-    "badge": "关于我",
-    "title": "构建数字产品、品牌和体验",
-    "intro1": "我是一名充满激情的软件工程师，热爱创造创新解决方案。我的技术之旅始于对事物运作原理的好奇，这促使我探索软件开发的各个方面。",
-    "intro2": "凭借全栈开发经验，我有机会参与从网络应用到人工智能解决方案的各种项目。关注创建以用户为中心、解决实际问题的应用程序。",
-    "location": {
-      "label": "工作模式",
-      "value": ""
-    },
-    "experience": {
-      "label": "工作经验",
-      "value": "5年以上"
-    },
-    "focus": {
-      "label": "专注领域",
-      "value": "全栈开发"
-    },
-    "skills": {
-      "badge": "技能专长",
-      "title": "技术能力",
-      "categories": {
-        "languages": "编程语言",
-        "frontend": "前端开发",
-        "backend": "后端开发"
-      }
-    },
-    "experience_section": {
-      "badge": "工作经历",
-      "title": "专业经验",
-      "jobs": {
-        "senior": {
-          "title": "高级软件工程师",
-          "company": "科技公司",
-          "period": "2018 - 至今",
-          "description": "主导使用 SrpingBoot 和 Java 开发Web应用。交付客户并指导初级开发人员。",
-          "achievements": [
-            "优化了系统性能，提升了 30% 的响应速度",
-            "创新性利用现有资源和技术储备，节省开发时间 40%",
-            "负责客户项目的需求调研、设计、实现和交付",
-            "指导 3 名初级开发人员"
-          ]
-        },
-        "fullstack": {
-          "title": "全栈开发工程师",
-          "company": "科技公司",
-          "period": "2016 - 2018",
-          "description": "使用包括 React、Java、SpringBoot 等技术开发企业产品全生命周期管理系统。",
-          "achievements": [
-            "成功交付 10+ 个客户项目",
-            "引入现代开发实践",
-            "客户满意度提升 25%"
-          ]
-        }
-      }
+        "badge": "项目",
+        "welcome": "欢迎探索我的项目世界！这里记录着每一次探索未知、突破自我的旅程。",
+        "description": "作为一名充满热情的开发者，我致力于打造富有创意的数字体验。每个项目都融入了对性能的执着追求和对用户体验的深度思考，让技术创新与人性化设计完美结合。",
+        "viewProject": "查看"
     }
-  },
-  "projects": {
-    "badge": "项目",
-    "welcome": "欢迎探索我的项目世界！这里记录着每一次探索未知、突破自我的旅程。",
-    "description": "作为一名充满热情的开发者，我致力于打造富有创意的数字体验。每个项目都融入了对性能的执着追求和对用户体验的深度思考，让技术创新与人性化设计完美结合。",
-    "viewProject": "查看"
-  }
 }

@@ -1,16 +1,16 @@
 /* 字体文件预加载 */
 @font-face {
-  font-family: 'PixelFont';
-  src: url('/fonts/PressStart2P-Regular.ttf') format('truetype');
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
+    font-family: "PixelFont";
+    src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'PixelBody';
-  src: url('/fonts/VT323-Regular.ttf') format('truetype');
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
+    font-family: "PixelBody";
+    src: url("/fonts/VT323-Regular.ttf") format("truetype");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
 }

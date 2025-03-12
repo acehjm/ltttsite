@@ -1,90 +1,90 @@
 {
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "contact": "Contact"
-  },
-  "language": {
-    "en": "English",
-    "zh": "中文"
-  },
-  "home": {
-    "title": "Hi",
-    "description": "Crafting elegant digital experiences with a focus on performance and accessibility. Passionate about building innovative solutions that bridge technology and human needs.",
-    "hire": "Available for hire",
-    "buttons": {
-      "viewGitHubProfile": "GitHub Profile",
-      "downloadResume": "Download Resume",
-      "viewAllProjects": "View all projects",
-      "comingSoon": "Coming soon"
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "language": {
+        "en": "English",
+        "zh": "中文"
+    },
+    "home": {
+        "title": "Hi",
+        "description": "Crafting elegant digital experiences with a focus on performance and accessibility. Passionate about building innovative solutions that bridge technology and human needs.",
+        "hire": "Available for hire",
+        "buttons": {
+            "viewGitHubProfile": "GitHub Profile",
+            "downloadResume": "Download Resume",
+            "viewAllProjects": "View all projects",
+            "comingSoon": "Coming soon"
+        },
+        "projects": {
+            "title": "Featured Projects",
+            "featured": "Featured"
+        },
+        "contact": "Contact Me"
+    },
+    "about": {
+        "badge": "About Me",
+        "title": "Building digital products, brands, and experiences",
+        "intro1": "I'm a passionate software engineer who loves creating innovative solutions. My journey in technology began with curiosity about how things work, which led me to explore various aspects of software development.",
+        "intro2": "With full-stack development experience, I've had the opportunity to work on projects ranging from web applications to AI solutions. I focus on creating user-centric applications that solve real problems.",
+        "location": {
+            "label": "Working modes",
+            "value": ""
+        },
+        "experience": {
+            "label": "Experience",
+            "value": "5+ years"
+        },
+        "focus": {
+            "label": "Focus",
+            "value": "Full Stack Development"
+        },
+        "skills": {
+            "badge": "Expertise",
+            "title": "Technical Skills",
+            "categories": {
+                "languages": "Programming Languages",
+                "frontend": "Frontend Development",
+                "backend": "Backend Development"
+            }
+        },
+        "experience_section": {
+            "badge": "Experience",
+            "title": "Professional Experience",
+            "jobs": {
+                "senior": {
+                    "title": "Senior Software Engineer",
+                    "company": "Tech Company",
+                    "period": "2018 - Present",
+                    "description": "Led development of web applications using SpringBoot and Java. Delivered to clients and mentored junior developers.",
+                    "achievements": [
+                        "Optimized system performance, improving response time by 30%",
+                        "DInnovative use of existing resources and technology reserves to save 40% of development time",
+                        "Responsible for requirements research, design, implementation and delivery of client projects",
+                        "Mentored 3 junior developers"
+                    ]
+                },
+                "fullstack": {
+                    "title": "Full Stack Developer",
+                    "company": "Tech Company",
+                    "period": "2016 - 2018",
+                    "description": "Developed enterprise PLM systems using React, Java, SpringBoot and other technologies.",
+                    "achievements": [
+                        "Delivered 10+ successful client projects",
+                        "Introduced modern development practices",
+                        "Improved client satisfaction by 25%"
+                    ]
+                }
+            }
+        }
     },
     "projects": {
-      "title": "Featured Projects",
-      "featured": "Featured"
-    },
-    "contact": "Contact Me"
-  },
-  "about": {
-    "badge": "About Me",
-    "title": "Building digital products, brands, and experiences",
-    "intro1": "I'm a passionate software engineer who loves creating innovative solutions. My journey in technology began with curiosity about how things work, which led me to explore various aspects of software development.",
-    "intro2": "With full-stack development experience, I've had the opportunity to work on projects ranging from web applications to AI solutions. I focus on creating user-centric applications that solve real problems.",
-    "location": {
-      "label": "Working modes",
-      "value": ""
-    },
-    "experience": {
-      "label": "Experience",
-      "value": "5+ years"
-    },
-    "focus": {
-      "label": "Focus",
-      "value": "Full Stack Development"
-    },
-    "skills": {
-      "badge": "Expertise",
-      "title": "Technical Skills",
-      "categories": {
-        "languages": "Programming Languages",
-        "frontend": "Frontend Development",
-        "backend": "Backend Development"
-      }
-    },
-    "experience_section": {
-      "badge": "Experience",
-      "title": "Professional Experience",
-      "jobs": {
-        "senior": {
-          "title": "Senior Software Engineer",
-          "company": "Tech Company",
-          "period": "2018 - Present",
-          "description": "Led development of web applications using SpringBoot and Java. Delivered to clients and mentored junior developers.",
-          "achievements": [
-            "Optimized system performance, improving response time by 30%",
-            "DInnovative use of existing resources and technology reserves to save 40% of development time",
-            "Responsible for requirements research, design, implementation and delivery of client projects",
-            "Mentored 3 junior developers"
-          ]
-        },
-        "fullstack": {
-          "title": "Full Stack Developer",
-          "company": "Tech Company",
-          "period": "2016 - 2018",
-          "description": "Developed enterprise PLM systems using React, Java, SpringBoot and other technologies.",
-          "achievements": [
-            "Delivered 10+ successful client projects",
-            "Introduced modern development practices",
-            "Improved client satisfaction by 25%"
-          ]
-        }
-      }
+        "badge": "Projects",
+        "welcome": "Welcome to my project world! Here I document every journey of exploring the unknown and pushing boundaries.",
+        "description": "As a passionate developer, I'm dedicated to crafting creative digital experiences. Each project embodies my relentless pursuit of performance and deep consideration for user experience, perfectly blending technical innovation with human-centered design.",
+        "viewProject": "View"
     }
-  },
-  "projects": {
-    "badge": "Projects",
-    "welcome": "Welcome to my project world! Here I document every journey of exploring the unknown and pushing boundaries.",
-    "description": "As a passionate developer, I'm dedicated to crafting creative digital experiences. Each project embodies my relentless pursuit of performance and deep consideration for user experience, perfectly blending technical innovation with human-centered design.",
-    "viewProject": "View"
-  }
 }
