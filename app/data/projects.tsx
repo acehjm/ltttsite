@@ -16,7 +16,7 @@ export const projects = [
             "Another amazing project description. Highlight the key features and technologies.",
         tags: ["Web", "Remix", "TypeJavascript", "Vite", "Tailwind CSS"],
         link: "https://github.com/yourusername/project-three",
-        image: "/images/lttt.png",
+        image: "/images/ltttdev.png",
         featured: true,
     },
     {
@@ -26,7 +26,7 @@ export const projects = [
             "Another amazing project description. Highlight the key features and technologies.",
         tags: ["Vue.js", "Express", "PostgreSQL"],
         link: "https://github.com/yourusername/project-three",
-        image: "/images/lttt.png",
+        image: "/images/ltttdev.png",
         featured: true,
     },
 ];

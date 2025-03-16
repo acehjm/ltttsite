@@ -95,6 +95,9 @@ export default function Projects() {
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
+                                                aria-hidden="true"
+                                                role="img"
+                                                aria-label={t("projects.arrowIcon")}
                                             >
                                                 <path
                                                     strokeLinecap="round"

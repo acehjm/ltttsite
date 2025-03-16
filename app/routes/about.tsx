@@ -127,34 +127,32 @@ export default function About() {
                                 </div>
                                 <div className="flex flex-wrap gap-2">
                                     {/* Languages */}
-                                    {["Python", "Go"].map((tag, index) => (
+                                    {["Python", "Go"].map((tag) => (
                                         <span
-                                            key={`lang-${index}`}
+                                            key={`lang-${tag.toLowerCase()}`}
                                             className="text-xs text-sky-300/50 bg-sky-400/[0.02] px-2.5 py-1 rounded-full font-['PixelBody'] hover:bg-sky-400/[0.03] hover:text-sky-200/60 transition-all duration-300"
                                         >
                                             {tag}
                                         </span>
                                     ))}
                                     {/* Frontend */}
-                                    {["Vue.js", "Svelte", "Three.js"].map((tag, index) => (
+                                    {["Vue.js", "Svelte", "Three.js"].map((tag) => (
                                         <span
-                                            key={`frontend-${index}`}
+                                            key={`frontend-${tag.toLowerCase()}`}
                                             className="text-xs text-rose-300/40 bg-rose-300/[0.015] px-2.5 py-1 rounded-full font-['PixelBody'] hover:bg-rose-300/[0.02] hover:text-rose-200/40 transition-all duration-300"
                                         >
                                             {tag}
                                         </span>
                                     ))}
                                     {/* Backend */}
-                                    {["Ktor", "MQTT", "RabbitMQ", "Apache Kafka"].map(
-                                        (tag, index) => (
-                                            <span
-                                                key={`backend-${index}`}
-                                                className="text-xs text-indigo-300/60 bg-indigo-400/[0.02] px-2.5 py-1 rounded-full font-['PixelBody'] hover:bg-indigo-400/[0.03] hover:text-indigo-200/80 transition-all duration-300"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ),
-                                    )}
+                                    {["Ktor", "MQTT", "RabbitMQ", "Apache Kafka"].map((tag) => (
+                                        <span
+                                            key={`backend-${tag.toLowerCase()}`}
+                                            className="text-xs text-indigo-300/60 bg-indigo-400/[0.02] px-2.5 py-1 rounded-full font-['PixelBody'] hover:bg-indigo-400/[0.03] hover:text-indigo-200/80 transition-all duration-300"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
                                 </div>
                             </div>
                         </section>
@@ -254,7 +252,7 @@ function ExperienceItem({
                 <ul className="space-y-2.5 pt-2">
                     {achievements.map((achievement, index) => (
                         <li
-                            key={index}
+                            key={`achievement-${achievement.substring(0, 10).replace(/\s/g, '')}-${index}`}
                             className="text-sm text-zinc-400/80 flex items-start group-hover:text-zinc-400/90 transition-colors duration-300"
                         >
                             <span className="text-violet-400/60 mr-2.5 mt-1">•</span>

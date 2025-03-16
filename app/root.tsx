@@ -14,6 +14,7 @@ export const links: LinksFunction = () => [
     { rel: "stylesheet", href: fontStyles },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" },
 ];
 
 export default function App() {

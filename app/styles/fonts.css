@@ -14,3 +14,65 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* Geist 字体 */
+@font-face {
+    font-family: "Geist";
+    src: url("https://assets.vercel.com/raw/upload/v1670950977/fonts/geist-sans/Geist-Regular.woff2") format("woff2");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url("https://assets.vercel.com/raw/upload/v1670950977/fonts/geist-sans/Geist-Medium.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url("https://assets.vercel.com/raw/upload/v1670950977/fonts/geist-sans/Geist-SemiBold.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url("https://assets.vercel.com/raw/upload/v1670950977/fonts/geist-sans/Geist-Bold.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url("https://assets.vercel.com/raw/upload/v1670950977/fonts/geist-sans/Geist-Light.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geist Fallback";
+    size-adjust: 100%;
+    ascent-override: 90%;
+    src: local("Arial");
+}
+
+/* 打字机字体 */
+@font-face {
+    font-family: "TypewriterFont";
+    src: local("Special Elite"), local("SpecialElite");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 专门的打字机字体类 */
+.typewriter-font {
+    font-family: "Special Elite", monospace !important;
+}

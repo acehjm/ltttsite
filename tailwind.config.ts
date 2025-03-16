@@ -54,7 +54,7 @@ export default {
                 sm: "calc(var(--radius) - 4px)",
             },
             fontFamily: {
-                sans: ["Inter var", ...fontFamily.sans],
+                sans: ['"Geist"', '"Geist Fallback"', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', ...fontFamily.sans],
             },
             keyframes: {
                 "accordion-down": {
