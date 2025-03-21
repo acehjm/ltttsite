@@ -1,6 +1,7 @@
 import { useLocation } from "@remix-run/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useLayoutStore } from "~/stores/layoutStore";
 
 const pageVariants = {
     initial: { opacity: 0, y: 20 },
@@ -14,11 +15,11 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
     const location = useLocation();
-    const [mounted, setMounted] = useState(false);
+    const { mounted, setMounted } = useLayoutStore();
 
     useEffect(() => {
         setMounted(true);
-    }, []);
+    }, [setMounted]);
 
     if (!mounted) {
         return <>{children}</>;

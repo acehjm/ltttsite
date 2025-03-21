@@ -6,6 +6,7 @@ import { NavBar } from "~/components/nav-bar";
 import { contacts } from "~/data/contacts";
 import { projects } from "~/data/projects";
 import { useEffect, useState } from "react";
+import { useAvatarStore } from "~/stores/avatarStore";
 
 export const meta: MetaFunction = () => {
     return [
@@ -26,26 +27,29 @@ export const meta: MetaFunction = () => {
 export default function Index() {
     const { t, i18n } = useTranslation();
     const currentLanguage = i18n.language;
-    const [showAvatar, setShowAvatar] = useState(true);
+    const { showAvatar, setShowAvatar } = useAvatarStore();
 
     // 监听窗口大小变化，在小屏幕上隐藏头像
     useEffect(() => {
-        const checkScreenSize = () => {
-            // 当屏幕宽度小于1024px时隐藏头像（可根据实际情况调整）
-            setShowAvatar(window.innerWidth >= 1024);
+        const handleResize = () => {
+            if (window.innerWidth < 1024) {
+                setShowAvatar(false);
+            } else {
+                setShowAvatar(true);
+            }
         };
 
-        // 初始检查
-        checkScreenSize();
+        // 初始化
+        handleResize();
 
-        // 添加窗口大小变化监听
-        window.addEventListener('resize', checkScreenSize);
+        // 添加事件监听
+        window.addEventListener("resize", handleResize);
 
-        // 清理函数
+        // 清理
         return () => {
-            window.removeEventListener('resize', checkScreenSize);
+            window.removeEventListener("resize", handleResize);
         };
-    }, []);
+    }, [setShowAvatar]);
 
     return (
         <>
@@ -166,21 +170,11 @@ export default function Index() {
                                     key="avatar"
                                     className="w-full h-full overflow-hidden relative z-0"
                                     style={{ transform: "rotate(5deg)" }}
-                                    animate={{
-                                        rotate: [5, 4, 5],
-                                        y: [0, -5, 0]
-                                    }}
-                                    transition={{
-                                        duration: 6,
-                                        repeat: Number.POSITIVE_INFINITY,
-                                        repeatType: "reverse",
-                                        ease: "easeInOut"
-                                    }}
                                 >
                                     <img
                                         src="/images/avatar.png"
                                         alt="Profile Avatar"
-                                        className="w-full h-full object-contain rounded-[2rem]"
+                                        className="w-full h-full object-contain rounded-[2rem] opacity-100"
                                     />
                                 </motion.div>
                             </AnimatePresence>

@@ -1,8 +1,9 @@
 import { ChevronDownIcon, GlobeIcon } from "@radix-ui/react-icons";
 import { Link, useLocation } from "@remix-run/react";
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavbarStore } from "~/stores/navbarStore";
 
 const navItems = [
     { name: "home", href: "/" },
@@ -14,9 +15,8 @@ const navItems = [
 export function NavBar() {
     const location = useLocation();
     const { scrollY } = useScroll();
-    const [isScrolled, setIsScrolled] = useState(false);
+    const { isScrolled, setIsScrolled, isOpen, setIsOpen } = useNavbarStore();
     const { t, i18n } = useTranslation();
-    const [isOpen, setIsOpen] = useState(false);
 
     const headerOpacity = useTransform(
         scrollY,
@@ -38,7 +38,7 @@ export function NavBar() {
         };
         window.addEventListener("scroll", updateScrolled);
         return () => window.removeEventListener("scroll", updateScrolled);
-    }, []);
+    }, [setIsScrolled]);
 
     const handleLanguageChange = (newLang: string) => {
         i18n.changeLanguage(newLang).then(() => {
